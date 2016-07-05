@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/webrebels/web-rebels-2017/issues"
   },
-  "homepage": "https://github.com/webrebels/web-rebels-2017#readme"
+  "homepage": "https://github.com/webrebels/web-rebels-2017#readme",
+  "dependencies": {
+    "tba.js": "^1.1.0"
+  }
 }
