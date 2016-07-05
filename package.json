@@ -1,0 +1,41 @@
+{
+  "name": "web-rebels-2017",
+  "version": "1.0.0",
+  "description": "Web Rebels 2017 website",
+  "main": "bin/index.js",
+  "bin": {
+    "web-rebels-2017": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webrebels/web-rebels-2017.git"
+  },
+  "keywords": [
+    "webrebels",
+    "conference",
+    "javascript",
+    "node"
+  ],
+  "contributors": [
+    {
+      "name": "Trygve Lie",
+      "email": "post@trygve-lie.com"
+    },
+    {
+      "name": "Espen Dalløkken",
+      "email": "espen@dallokken.com"
+    },
+    {
+      "name": "Anders Olsen Sandvik",
+      "email": "anders@andersos.net"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webrebels/web-rebels-2017/issues"
+  },
+  "homepage": "https://github.com/webrebels/web-rebels-2017#readme"
+}
