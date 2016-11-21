@@ -65,24 +65,24 @@ app.use(helmet.hsts({
 }));
 app.use(helmet.frameguard('deny'));
 app.use(helmet.contentSecurityPolicy({
-  defaultSrc: ["'none'"],
-  scriptSrc: ["'self'", "data:", "'unsafe-inline'", "'unsafe-eval'",
-    "www.google-analytics.com", "ssl.google-analytics.com",
-    "professional.player.qbrick.com", "publisher.qbrick.com"
-  ],
-  styleSrc: ["'self'", "'unsafe-inline'"],
-  imgSrc: ["'self'", "data:", "server.arcgisonline.com",
-    "ssl.google-analytics.com"
-  ],
-  objectSrc: ["'self'", "professional.player.qbrick.com"],
-  fontSrc: ["'self'"],
-  connectSrc: ["*"],
-  sandbox: ['allow-forms', 'allow-scripts'],
-  reportUri: '/admin/csp',
-  /*reportOnly: true, // set to true if you only want to report errors*/
+  directives: {
+    defaultSrc: ["'none'"],
+    scriptSrc: ["'self'", "data:", "'unsafe-inline'", "'unsafe-eval'",
+      "www.google-analytics.com", "ssl.google-analytics.com",
+      "professional.player.qbrick.com", "publisher.qbrick.com"
+    ],
+    styleSrc: ["'self'", "'unsafe-inline'"],
+    imgSrc: ["'self'", "data:", "server.arcgisonline.com",
+      "ssl.google-analytics.com"
+    ],
+    objectSrc: ["'self'", "professional.player.qbrick.com"],
+    fontSrc: ["'self'"],
+    connectSrc: ["*"],
+    sandbox: ['allow-forms', 'allow-scripts'],
+    reportUri: '/admin/csp',
+  },
   setAllHeaders: true, // set to true if you want to set all headers
-  safari5: false // set to true if you want to force buggy CSP in Safari 5
-}));
+ }));
 
 
 
