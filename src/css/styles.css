@@ -110,35 +110,42 @@ footer {
     background-color: #202020;
 }
 footer .tc a {
+  color: #CC07C7;
   padding: 0.5em 1em;
 }
 footer .tc a:hover, footer .tc a:focus {
-  background-color: #8f4d91;
+  border-color: #fff;
+  box-shadow: none;
   color: #fff;
 }
 /* Navigation in footer */
 
 .menu {
-    list-style-type: none;
-    clear: both;
-    padding-left: 0;
-    margin-left: 0;
+  list-style-type: none;
+  clear: both;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .menu-item {
-    display: inline-block;
+  display: inline-block;
 }
 
 .menu-item a {
-    display: block;
-    padding: 0.5em 1em;
-    color: #fff !important;
+  border-bottom: none;
+  display: block;
+  padding: 0.5em 1em;
+  color: #fff !important;
 }
 
-.menu-item a:hover,
-.menu-item a:active {
-    background-color: #8f4d91;
-    transition: all 0.1s ease-in 0s;
+.menu-item a:hover, .menu-item a:focus {
+  color: #CC07C7 !important;
+}
+
+.menu-item a::before {
+  content: '»';
+  font-size: 0.8em;
+  padding-right: 0.3em;
 }
 
 /* Sponsors */

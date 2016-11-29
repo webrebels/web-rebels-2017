@@ -32,7 +32,7 @@ router.get('/home', (req, res) => {
 
 router.get('/about', (req, res) => {
     res.render('about', {
-        pageTitle: 'About the Web Rebels Conference',
+        pageTitle: 'Web Rebels ☠ About',
         header: 'penthouse',
         css: css
     });
@@ -40,7 +40,7 @@ router.get('/about', (req, res) => {
 
 router.get('/policies', (req, res) => {
     res.render('policies', {
-        pageTitle: 'Policies for the Web Rebels Conference',
+        pageTitle: 'Web Rebels ☠ Policies',
         header: 'penthouse',
         css: css
     });
@@ -48,7 +48,7 @@ router.get('/policies', (req, res) => {
 
 router.get('/location', (req, res) => {
     res.render('location', {
-        pageTitle: 'Web Rebel location 2017',
+        pageTitle: 'Web Rebels ☠ Location',
         header: 'penthouse',
         css: css
     });
@@ -56,7 +56,7 @@ router.get('/location', (req, res) => {
 
 router.get('/travel', (req, res) => {
     res.render('travel', {
-        pageTitle: 'Traveling to Web Rebel 2017?',
+        pageTitle: 'Web Rebels ☠ Traveling',
         header: 'penthouse',
         css: css
     });
@@ -64,7 +64,7 @@ router.get('/travel', (req, res) => {
 
 router.get('/tickets', (req, res) => {
     res.render('tickets', {
-        pageTitle: 'Ticket Sales for Web Rebels 2017',
+        pageTitle: 'Web Rebels ☠ Ticket Sales 2017',
         header: 'penthouse',
         css: css
     });
@@ -72,7 +72,7 @@ router.get('/tickets', (req, res) => {
 
 router.get('/speakers', (req, res) => {
     res.render('speakers', {
-        pageTitle: 'Web Rebels Speakers 2017',
+        pageTitle: 'Web Rebels ☠ Speakers 2017',
         header: 'penthouse',
         css: css
     });
@@ -80,7 +80,7 @@ router.get('/speakers', (req, res) => {
 
 router.get('/oslo', (req, res) => {
     res.render('oslo', {
-        pageTitle: 'Oslo survival guide for the Web Rebels',
+        pageTitle: 'Web Rebels ☠ Survival Guide',
         header: 'penthouse',
         css: css
     });
@@ -88,7 +88,7 @@ router.get('/oslo', (req, res) => {
 
 router.get('/family', (req, res) => {
     res.render('family', {
-        pageTitle: 'Information for families traveling to the Web Rebels',
+        pageTitle: 'Web Rebels ☠ Families',
         header: 'penthouse',
         css: css
     });
@@ -96,7 +96,7 @@ router.get('/family', (req, res) => {
 
 router.get('/schedule', (req, res) => {
     res.render('schedule', {
-        pageTitle: 'The Schedule for the Web Rebels 2017',
+        pageTitle: 'Web Rebels ☠ Schedule 2017',
         header: 'penthouse',
         css: css
     });
@@ -104,7 +104,7 @@ router.get('/schedule', (req, res) => {
 
 router.get('/sponsors', (req, res) => {
     res.render('sponsors/index', {
-        pageTitle: 'Sponors of the 2017 Web Rebels',
+        pageTitle: 'Web Rebels ☠ Sponsors 2017',
         header: 'penthouse',
         css: css
     });
@@ -112,7 +112,7 @@ router.get('/sponsors', (req, res) => {
 
 router.get('/sponsors/packages', (req, res) => {
     res.render('sponsors/packages', {
-        pageTitle: 'Web Rebels Sponsorship options 2017',
+        pageTitle: 'Web Rebels ☠ Sponsorship Options 2017',
         header: 'penthouse',
         css: css
     });
@@ -137,7 +137,7 @@ router.get('/scholarship/donate', (req, res) => {
 */
 router.get('/roadbook', (req, res) => {
     res.render('roadbook', {
-        pageTitle: 'Web Rebels Speaker Roadbook',
+        pageTitle: 'Web Rebels ☠ Speaker Roadbook',
         header: 'penthouse',
         css: css
     });
