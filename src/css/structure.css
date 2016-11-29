@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-/* ------------------------------------------------------- 
+/* -------------------------------------------------------
 
-CSS for Web Rebels 2016
+CSS for Web Rebels 2017
 
 Inspired by:
 https://github.com/inuitcss/getting-started
@@ -11,7 +11,7 @@ https://github.com/tachyons-css/tachyons <333
 ------------------------------------------------------- */
 
 
-/* ------------------------------------------------------- 
+/* -------------------------------------------------------
     Base / unclassed HTML-elements
 ------------------------------------------------------- */
 
@@ -58,11 +58,11 @@ a {
 
 a:hover,
 a:focus {
-    color: #202020; 
+    color: #202020;
 }
 
 
-/* ------------------------------------------------------- 
+/* -------------------------------------------------------
     Objects
 ------------------------------------------------------- */
 
@@ -76,7 +76,7 @@ a:focus {
 @media screen and (min-width: 1200px) {
     .wrapper {
         max-width: 800px;
-    }   
+    }
 
     .wrapper--wide {
         max-width: 1200px;
@@ -134,7 +134,7 @@ a:focus {
 }
 
 
-/* ------------------------------------------------------- 
+/* -------------------------------------------------------
     Components
 ------------------------------------------------------- */
 
@@ -187,7 +187,7 @@ header {
 }
 
 
-/* ------------------------------------------------------- 
+/* -------------------------------------------------------
     Spacing from tachyons <3
     http://tachyons.io/docs/layout/spacing/
 ------------------------------------------------------- */
@@ -318,7 +318,7 @@ header {
 .mhxxxl  { margin-left: 16rem; margin-right: 16rem; }
 
 
-/* ------------------------------------------------------- 
+/* -------------------------------------------------------
     Utilities and helper classes
 ------------------------------------------------------- */
 
@@ -370,7 +370,7 @@ header {
 .lh-title { line-height: 1.3; }
 .lh-copy  { line-height: 1.7; }
 
-/* I can haz floats?! 
+/* I can haz floats?!
 Remember clearfix .cf on parent */
 
 .fl { float: left;  display: inline; }
@@ -378,7 +378,7 @@ Remember clearfix .cf on parent */
 .fn { float: none; }
 
 
-/* Clearfix 
+/* Clearfix
 ref http://nicolasgallagher.com/micro-clearfix-hack/ */
 
 .cf:before,
