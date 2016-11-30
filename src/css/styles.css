@@ -107,17 +107,19 @@
 }
 
 footer {
-    background-color: #202020;
+    background-color: #272327;
 }
-footer .tc a {
+footer p.tc a {
+  border: none;
   color: #CC07C7;
-  padding: 0.5em 1em;
+  padding: 0 0.3em 0.2em 0.3em;
+  text-decoration: underline;
 }
-footer .tc a:hover, footer .tc a:focus {
-  border-color: #fff;
+footer p.tc a:hover, footer p.tc a:focus {
   box-shadow: none;
   color: #fff;
 }
+
 /* Navigation in footer */
 
 .menu {
@@ -136,17 +138,20 @@ footer .tc a:hover, footer .tc a:focus {
   display: block;
   padding: 0.5em 1em;
   color: #fff !important;
+  text-decoration: underline;
 }
 
 .menu-item a:hover, .menu-item a:focus {
+  box-shadow: none;
   color: #CC07C7 !important;
 }
 
-.menu-item a::before {
-  content: '»';
-  font-size: 0.8em;
-  padding-right: 0.3em;
-}
+// footer .tc a::before,
+// .menu-item a::before {
+//   content: '»';
+//   font-size: 0.8em;
+//   padding-right: 0.3em;
+// }
 
 /* Sponsors */
 
