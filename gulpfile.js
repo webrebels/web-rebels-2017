@@ -18,7 +18,7 @@ var buffer = require('vinyl-buffer');
 gulp.task('js', () => {
   return browserify('./src/js/script.js')
     .bundle()
-    .pipe(source('app-2016.js'))
+    .pipe(source('app-2017.js'))
     .pipe(buffer())
     .pipe(uglify({
       outSourceMap: false
@@ -44,7 +44,7 @@ gulp.task('css-app', () => {
     .pipe(minifyCSS({
       removeEmpty: true
     }))
-    .pipe(concat('app-2016.css'))
+    .pipe(concat('app-2017.css'))
     .pipe(gulp.dest('./public/css/'));
 });
 
