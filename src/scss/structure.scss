@@ -1,27 +1,23 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-/* -------------------------------------------------------
+// CSS for Web Rebels 2017
+// Inspired by:
+// https://github.com/inuitcss/getting-started
+// https://github.com/mhauken/start/
+// https://github.com/tachyons-css/tachyons <333
 
-CSS for Web Rebels 2017
-
-Inspired by:
-https://github.com/inuitcss/getting-started
-https://github.com/mhauken/start/
-https://github.com/tachyons-css/tachyons <333
-------------------------------------------------------- */
-
-
-/* -------------------------------------------------------
-    Base / unclassed HTML-elements
-------------------------------------------------------- */
+// Base / unclassed HTML-elements
 
 html {
     box-sizing: border-box;
     color: #3a353a;
     font-family: 'Rubik', sans-serif;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
+
+*, // sass-lint:disable force-pseudo-nesting
+*::before, // sass-lint:disable force-pseudo-nesting
+*::after { // sass-lint:disable force-pseudo-nesting
+    box-sizing: border-box;
 }
 
 body {
@@ -35,21 +31,61 @@ body {
     }
 }
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul,
-form, fieldset, legend, figure, table, th, td, caption, hr {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+figure,
+table,
+th,
+td,
+caption,
+hr {
     margin:  0;
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul {
     margin-bottom: 1em;
 }
 
-ul, ol, dd {
+ul,
+ol,
+dd {
     margin-left: 2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Bungee', sans-serif;
     font-weight: normal;
 }
@@ -80,9 +116,7 @@ a:focus {
 }
 
 
-/* -------------------------------------------------------
-    Objects
-------------------------------------------------------- */
+// Objects
 
 .wrapper,
 .wrapper--wide {
@@ -104,8 +138,10 @@ a:focus {
 .list-inline {
     margin: 0;
     padding: 0;
-    list-style: none; }
-    .list-inline > li {
+    list-style: none;
+}
+
+.list-inline > li {
     display: inline-block;
 }
 
@@ -141,13 +177,13 @@ header {
 }
 
 .homelink {
-    border: none;
+    border: 0;
     box-shadow: none;
     color: #3a353a;
 }
 
 .homelink:hover {
-    border: none;
+    border: 0;
     box-shadow: none;
     color: #CC07C7;
 }
@@ -350,7 +386,7 @@ ref http://nicolasgallagher.com/micro-clearfix-hack/ */
 .cf:before,
 .cf:after { content: " "; display: table; }
 .cf:after { clear: both; }
-.cf {       *zoom: 1; }
+.cf { zoom: 1; }
 
 
 /* Vertical align text and inline elements */

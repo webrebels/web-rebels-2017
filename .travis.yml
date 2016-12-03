@@ -10,7 +10,7 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.8
-script: npm run test && npm run predeploy
+script: npm run test && npm run build
 deploy:
   provider: modulus
   project_name: web-rebels-www

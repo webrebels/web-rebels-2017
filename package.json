@@ -20,11 +20,11 @@
   ],
   "homepage": "https://webrebels.org/",
   "scripts": {
-    "eslint": "eslint .",
-    "min": "gulp",
-    "predeploy": "npm run-script min",
-    "start": "node ./bin/server.js",
-    "test": "true"
+    "build": "NODE_ENV=production webpack -p --config ./tools/webpack.config.js",
+    "start": "npm run build && node ./bin/server.js",
+    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint:scss": "sass-lint -c src/scss/.sass-lint.yml -v -q",
+    "test": "npm run lint:js && npm run lint:scss"
   },
   "contributors": [
     {
@@ -51,29 +51,45 @@
     "url": "https://github.com/webrebels/web-rebels-2017/issues"
   },
   "devDependencies": {
-    "browserify": "13.1.1",
-    "combined-stream": "1.0.5",
-    "eslint": "3.10.0",
-    "gulp": "3.9.1",
-    "gulp-concat": "2.6.1",
-    "gulp-minify-css": "1.2.4",
-    "gulp-uglify": "2.0.0",
-    "vinyl-buffer": "1.0.0",
-    "vinyl-source-stream": "1.1.0"
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "sass-lint": "^1.10.2",
+    "webpack": "^1.13.3"
   },
   "dependencies": {
+    "autoprefixer": "^6.5.3",
     "body": "5.1.0",
     "body-parser": "1.15.2",
     "bole": "3.0.2",
     "compression": "1.6.2",
     "convict": "1.5.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
     "express": "4.13.4",
     "express-validator": "2.21.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
     "hbs": "4.0.1",
     "helmet": "3.1.0",
     "mandrill-api": "1.0.45",
+    "node-sass": "^3.13.0",
+    "postcss-loader": "^1.1.1",
+    "sass-loader": "^4.0.2",
     "serve-static": "1.11.0",
     "stripe": "4.7.0",
+    "style-loader": "^0.13.1",
     "tba.js": "^1.1.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ]
+    }
   }
 }

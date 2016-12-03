@@ -1,15 +1,14 @@
-'use strict';
+const server = require('./app.js');
+const config = require('../config');
+const bole = require('bole');
 
-const server  = require('./app.js');
-const config  = require('../config');
-const bole    = require('bole');
-const log     = bole('server');
+const log = bole('server');
 
 server.listen(config.get('httpServerPort'), () => {
-    log.info('Web Rebels website running at http://localhost:' + config.get('httpServerPort') + '/');
-    log.info('server process has pid ' + process.pid);
-    log.info('environment is: ' + config.get('env'));
-    log.info('serving static files from ' + config.get('docRoot'));
+    log.info(`Web Rebels website running at http://localhost:${config.get('httpServerPort')}/`);
+    log.info(`server process has pid ${process.pid}`);
+    log.info(`environment is: ${config.get('env')}`);
+    log.info(`serving static files from ${config.get('docRoot')}`);
 });
 
 process.on('uncaughtException', (error) => {
