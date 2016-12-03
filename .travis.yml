@@ -1,0 +1,18 @@
+language: node_js
+cache:
+  directories: node_modules
+node_js: 6
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+script: npm run test && npm run predeploy
+deploy:
+  provider: modulus
+  project_name: web-rebels-www
+  api_key:
+    secure: y453XNgjEfRqV6uJ2VaogziCvW4iHYGxvYgIdxfFBgnV/lbm7DbvManroHW2Wg5yOPAVP+aTvvu/XUNnN4gCycNie5Hv6Fpw09QBwWeV4QK5By22K3aoDI8oJQMwv5iYHHZfqWlpARxeHD5xZ50MXTRjdSqX4z1xK3SvbNh2BmamUGbqEnFVPzu9/P8ZBvzhyeQpqrBPdDDTV4QPgO/+nStzV9jrH3VI4BfX8di5XQ1YRJRPFi4YY68VgJ2ZyXLpJGs1DFBCgvfBnXRdeiVEnd/b/Zqoe7/AsnE+j72Hm+VTprmkWPnurbikAVvPq5/1jR1UNx5WPhj0bH1/i/6J1M2GopV/rpAYN+ROsS+p7Fxt49Tamrqhz/RDbG4oenvfUXx1F0Vc/gi4Z0OViVxiHDV5IEIRl89FZMbuf2ooXORxWpq+yUXtVIG3eHB4tZpXZeyKcWJdIC5FUgsYR7ui50efW57xKCwLMrHYqdR48DZTu54hdywtgSQvIFhzUEv+XsVyuI8rlKusfGsUqLBZdVydznrzILgfqC11PVcSvZvubnhnWwOmHOLXyp5gSD+3/HpMyTHHAex2ijNx+VTi/3NS+qjyLUX21lR3RLXO5H83c/rNzbDzgzrJX0hVhVDreSkw4ua1yfxd+AjTPhWsOlz2n0y78XisnX4E56pM7hk=

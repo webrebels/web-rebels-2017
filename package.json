@@ -23,7 +23,8 @@
     "eslint": "eslint .",
     "min": "gulp",
     "predeploy": "npm run-script min",
-    "start": "node ./bin/server.js"
+    "start": "node ./bin/server.js",
+    "test": "true"
   },
   "contributors": [
     {
@@ -37,6 +38,10 @@
     {
       "name": "Bodil Stokke",
       "email": "bodil@bodil.tv"
+    },
+    {
+      "name": "Anders Olsen Sandvik",
+      "email": "anders@webrebels.org"
     }
   ],
   "engines": {
