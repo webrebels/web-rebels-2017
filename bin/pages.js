@@ -65,6 +65,7 @@ router.get('/tickets', (req, res) => {
     });
 });
 
+
 router.get('/speakers', (req, res) => {
     res.render('speakers', {
         pageTitle: 'Web Rebels ☠ Speakers 2017',
@@ -114,22 +115,14 @@ router.get('/sponsors/packages', (req, res) => {
 });
 
 router.get('/scholarship', (req, res) => {
-    res.status(404).send(404);
-    /* res.render('scholarship/index', {
+    res.render('scholarship/index', {
         pageTitle: 'Web Rebels Scholarship Programme',
         header: 'penthouse',
-        css: css
-    });*/
-});
-/*
-router.get('/scholarship/donate', (req, res) => {
-    res.render('scholarship/donate', {
-        pageTitle: 'Donate to the Web Rebels Scholarship Programme',
-        header: 'penthouse',
-        css: css
+        css,
     });
 });
-*/
+
+/*
 router.get('/roadbook', (req, res) => {
     res.render('roadbook', {
         pageTitle: 'Web Rebels ☠ Speaker Roadbook',
@@ -137,26 +130,7 @@ router.get('/roadbook', (req, res) => {
         css,
     });
 });
-
+*/
 router.get('/buytickets', (req, res) => {
     res.redirect('https://ti.to/webrebels/2017');
 });
-
-/*
-router.post('/scholarship/donate', (req, res) => {
-    //let stripe = require('stripe')(config.get('stripeSecretApiKey'));
-
-    req.assert('email', 'You have to write an email').isEmail();
-    req.assert('amount', 'You have to set an amount').notEmpty();
-
-    let errors = req.validationErrors();
-    if (errors) {
-        res.render('error', errors);
-    } else {
-
-        //  add Stripe one-time charge as in this sample
-        // https://github.com/mjhea0/node-stripe-charge/blob/master/server/routes/charge.js
-        res.render('scholarship/donateThanks');
-    }
-});
-*/
