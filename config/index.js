@@ -42,7 +42,7 @@ const conf = convict({
         default: 'info',
         env: 'NODE_LOG_CONSOLE_LEVEL',
         arg: 'log-console-level',
-    }
+    },
 
 });
 

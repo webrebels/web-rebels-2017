@@ -40,7 +40,6 @@ app.use(serveStatic(path.resolve(__dirname, `..${config.get('docRoot')}`), {
     maxAge: '30d',
 }));
 
-
 app.use(helmet.hsts({
     maxAge: 15724800000, // 26 weeks
     includeSubdomains: true,
