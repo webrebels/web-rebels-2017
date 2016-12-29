@@ -14,7 +14,6 @@ const app = express();
 
 const config = require('../config');
 const middleware = require('./middleware.js');
-const routes = require('./routes.js');
 const pages = require('./pages.js');
 
 // Configure logging
@@ -51,12 +50,6 @@ app.use(helmet.hsts({
     preload: true,
 }));
 app.use(helmet.frameguard('deny'));
-
-
-
-// Set up system routes
-app.get('/admin/ping', routes.ping);
-app.post('/admin/csp', routes.csp);
 
 
 // Set up all other routes
