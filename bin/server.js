@@ -1,3 +1,5 @@
+'use strict';
+
 const server = require('./app.js');
 const config = require('../config');
 const bole = require('bole');

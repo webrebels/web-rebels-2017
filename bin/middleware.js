@@ -1,4 +1,4 @@
-
+'use strict';
 
 /**
   * Enforce SSL if the http header "x-forwarded-proto" is pressent
