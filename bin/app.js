@@ -3,7 +3,6 @@ const http = require('http');
 
 const compress = require('compression')();
 const express = require('express');
-const validator = require('express-validator');
 const helmet = require('helmet');
 const hbs = require('hbs');
 const serveStatic = require('serve-static');
@@ -35,7 +34,6 @@ app.set('views', path.resolve(__dirname, '../views/'));
 app.use(middleware.ssl);
 app.use(compress);
 
-app.use(validator());
 app.use(serveStatic(path.resolve(__dirname, `..${config.get('docRoot')}`), {
     maxAge: '30d',
 }));
