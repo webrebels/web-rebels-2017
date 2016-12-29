@@ -61,7 +61,6 @@
   "dependencies": {
     "autoprefixer": "^6.5.3",
     "body": "5.1.0",
-    "body-parser": "1.15.2",
     "bole": "3.0.2",
     "compression": "1.6.2",
     "convict": "2.0.0",

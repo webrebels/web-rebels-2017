@@ -1,7 +1,6 @@
 const path = require('path');
 const http = require('http');
 
-const bodyParser = require('body-parser');
 const compress = require('compression')();
 const express = require('express');
 const validator = require('express-validator');
@@ -35,9 +34,7 @@ app.set('views', path.resolve(__dirname, '../views/'));
 // Set middleware
 app.use(middleware.ssl);
 app.use(compress);
-app.use(bodyParser.urlencoded({
-    extended: true,
-}));
+
 app.use(validator());
 app.use(serveStatic(path.resolve(__dirname, `..${config.get('docRoot')}`), {
     maxAge: '30d',
