@@ -27,6 +27,14 @@ router.get('/home', (req, res) => {
     });
 });
 
+router.get('/cfp', (req, res) => {
+    res.render('cfp', {
+        pageTitle: 'Web Rebels ☠ Call For Papersx',
+        header: 'penthouse',
+        css,
+    });
+});
+
 router.get('/about', (req, res) => {
     res.render('about', {
         pageTitle: 'Web Rebels ☠ About',
@@ -123,6 +131,7 @@ router.get('/scholarship', (req, res) => {
         css,
     });
 });
+
 
 /*
 router.get('/roadbook', (req, res) => {
