@@ -29,7 +29,7 @@ router.get('/home', (req, res) => {
 
 router.get('/cfp', (req, res) => {
     res.render('cfp', {
-        pageTitle: 'Web Rebels ☠ Call For Papersx',
+        pageTitle: 'Web Rebels ☠ Call For Papers',
         header: 'penthouse',
         css,
     });
