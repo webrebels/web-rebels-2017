@@ -1,5 +1,3 @@
-'use strict';
-
 /**
   * Enforce SSL if the http header "x-forwarded-proto" is pressent
   * This header is set by the http proxy which handles the SSL
