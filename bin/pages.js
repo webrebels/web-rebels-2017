@@ -7,7 +7,8 @@ const css = fs.readFileSync(path.resolve(__dirname, '../public/main.css'), {
     encoding: 'utf8',
 });
 
-const router = module.exports = express.Router();
+const router = express.Router();
+module.exports = router;
 
 router.get('/', (req, res) => {
     res.render('index', {
