@@ -20,8 +20,9 @@
   ],
   "homepage": "https://webrebels.org/",
   "scripts": {
+    "postinstall": "npm run build",
     "build": "NODE_ENV=production webpack -p --config ./tools/webpack.config.js",
-    "start": "npm run build && node ./bin/server.js",
+    "start": "node ./bin/server.js",
     "lint:js": "eslint . --ignore-path .gitignore",
     "lint:scss": "sass-lint -c src/scss/.sass-lint.yml -v -q",
     "test": "npm run lint:js && npm run lint:scss"
