@@ -22,7 +22,7 @@ const conf = convict({
     httpServerPort: {
         doc: 'The port the server should bind to',
         format: 'port',
-        default: 8000,
+        default: 8080,
         env: 'PORT',
         art: 'port',
     },
