@@ -20,7 +20,7 @@ module.exports = {
     entry: './src/scss/main.scss',
     output: {
         path: './public',
-        filename: '[name]',
+        filename: '[name].js',
     },
     plugins: [
         new ExtractTextPlugin('[name].css'),
