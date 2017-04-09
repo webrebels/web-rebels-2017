@@ -1,9 +1,25 @@
 header {
   background-image: url("/img/headers/header.png");
-  height: 100vh;
   background-size: cover;
+  height: 100vh;
   width: 1000px;
   text-align: center;
+}
+#talks {
+  background-image: url("/img/headers/talks.png");
+  background-size: cover;
+}
+#schedule {
+  background-image: url("/img/headers/schedule.png");
+  background-size: cover;
+}
+#location {
+  background-image: url("/img/headers/location.png");
+  background-size: cover;
+}
+#about {
+  background-image: url("/img/headers/about.png");
+  background-size: cover;
 }
 
 img.logo {
@@ -16,15 +32,42 @@ img.logo {
 }
 
 nav {
-  background-color: #000;
+  background-color: $black;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
 }
 
-nav ul li {
-  display: inline-block;
+.nav-list {
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
-nav a {
-  text-decoration: none;
+.menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top: solid transparent 50vh;
+  border-right: solid $black 50vh;
+  width: 0;
+  height: 0;
+  .nav-list {
+    position: relative;
+    top: -25vh;
+    right: -25vh;
+  }
 }
 
 // strong {
