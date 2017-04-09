@@ -1,2 +1,2 @@
 web: nodemon ./bin/server.js
-assets: webpack-dev-server -p --config ./tools/webpack.config.js
+assets: webpack-dev-server -p --config ./tools/webpack.config.js --inline --hot
