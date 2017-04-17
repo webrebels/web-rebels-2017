@@ -97,33 +97,34 @@ nav {
 
 section {
     @extend .cf;
-  padding: 300px 0 0 100px;
-  background-color: $black;
-  background-size: contain;
-  background-repeat: no-repeat;
-  h1 {
-      font-size: 60px;
-      font-weight: bold;
-    text-transform: uppercase;
-    color: $yellow;
-  }
-  .left-column {
-      @extend .w-40;
-      @extend .fl;
-  }
-  .right-column {
-      @extend .w-60;
-      @extend .fl;
-  }
+    min-height: 1500px;
+    padding: 300px 0 0 100px;
+    background-color: $black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    h1 {
+        font-size: 60px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $yellow;
+    }
+    .left-column {
+        @extend .w-40;
+        @extend .fl;
+    }
+    .right-column {
+        @extend .w-60;
+        @extend .fl;
+    }
 
-  .section-content {
-      color: $white;
-      p {
-          padding: 0 0 10px;
-          margin: 0 60px 60px 0;
-          border-bottom: 10px solid $white;
-      }
-  }
+    .section-content {
+        color: $white;
+        p {
+            padding: 0 0 10px;
+            margin: 0 60px 60px 0;
+            border-bottom: 10px solid $white;
+        }
+    }
 }
 
 $section-padding-right: 160px;
@@ -232,6 +233,20 @@ $section-padding-right: 160px;
     }
 }
 
+#location {
+    .right-column {
+        color: $black;
+        padding: 30px $section-padding-right 30px 30px;
+        background-color: $yellow;
+    }
+
+    h5 {
+        text-transform: uppercase;
+    }
+    h4 {
+        font-weight: bold;
+    }
+}
 // strong {
 //     font-weight: 700;
 // }
