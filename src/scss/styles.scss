@@ -4,22 +4,27 @@ header {
   height: 100vh;
   width: 1000px;
   text-align: center;
+  backgroun-color: $black;
 }
 #talks {
   background-image: url("/img/headers/talks.png");
   background-size: cover;
+  height: 100vh;
 }
 #schedule {
   background-image: url("/img/headers/schedule.png");
   background-size: cover;
+  height: 100vh;
 }
 #location {
   background-image: url("/img/headers/location.png");
   background-size: cover;
+  height: 100vh;
 }
 #about {
   background-image: url("/img/headers/about.png");
   background-size: cover;
+  height: 100vh;
 }
 
 img.logo {
@@ -32,21 +37,48 @@ img.logo {
 }
 
 nav {
+  display: none;
   background-color: $black;
   position:absolute;
   bottom: 0;
   width: 100%;
+  font-size: 14px;
 
+  div {
+      display: inline;
+      margin: 0 auto;
+  }
   ul {
-    margin: 0;
+      margin: 0;
+      display: table-row;
   }
 
   li {
-    display: inline-block;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  a {
+      border-top: solid transparent 5px;
+      padding: 0 20px;
+      margin: 0 20px;
+  }
+  a:hover,
+  a:focus {
+      border-top: solid 8px rgb(244,219,25);
+  }
+  svg {
+      fill: $yellow;
+      height: 25px;
+      padding: 4px 0 0 0;
+  }
+  @media (min-width: 1024px) {
+      display: block;
   }
 }
 
+
 .nav-list {
+    text-transform: uppercase;
   li {
     list-style: none;
   }
@@ -59,15 +91,74 @@ nav {
   position: absolute;
   bottom: 0;
   right: 0;
-  border-top: solid transparent 50vh;
-  border-right: solid $black 50vh;
+  border-top: solid transparent 100vh;
+  border-right: solid $black 35vh;
   width: 0;
   height: 0;
   .nav-list {
     position: relative;
     top: -25vh;
-    right: -25vh;
+    width: 200px;
+    text-align: right;
   }
+}
+
+section {
+  padding: 300px 0 0 100px;
+  background-color: $black;
+  h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: $yellow;
+  }
+}
+
+#talks {
+    .talk-details {
+        background-color: $yellow;
+        padding: 30px;
+    }
+    .presenter-details {
+        padding: 15px;
+        position: relative;
+        top: -4px;
+        margin: -15px 0 0 15px;
+        background-color: $grey;
+        color: $white;
+        .name {
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+        }
+        .intro {
+            padding: 0;
+            margin: 0;
+        }
+
+        .links {
+            list-style: none;
+            margin: 0;
+            li {
+                display: inline;
+                color: $white;
+            }
+        }
+        img {
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+        }
+        .details-wrapper {
+            display: inline;
+            width: 80%;
+        }
+    }
+
+    .talk-nav {
+        margin: 0;
+        padding: 0;
+        word-wrap: break-word;
+    }
 }
 
 // strong {

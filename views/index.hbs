@@ -10,25 +10,65 @@
     </ul>
   </div>
   <nav>
-    <ul class="nav-list">
-      <li><a href="#top">logo</a></li>
-      <li><a href="#tickets">tickets <i class="fa fa-check"></i></a></li>
-      <li><a href="#talks">talks <i class="fa fa-microphone"></i></a></li>
-      <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li>
-      <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
-      <li><a href="#about">about <i class="fa fa-question"></i></a></li>
-    </ul>
+    <div>
+      <ul class="nav-list">
+        <li>{{{svg}}}</li>
+        <li><a href="#tickets">tickets <i class="fa fa-check"></i></a></li>
+        <li><a href="#talks">talks <i class="fa fa-microphone"></i></a></li>
+        <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li>
+        <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
+        <li><a href="#about">about <i class="fa fa-question"></i></a></li>
+      </ul>
+    </div>
   </nav>
 </header>
-<section id="talks">
-  <h1>Something goes here</h1>
+<section id="talks" class="cf">
+  <h1>Talks</h1>
+  <div class="w-40 fl">
+    <p>Two days, one track, <br/> 16 speakers &amp; 16 talks!</p>
+    <ul class="talk-nav">
+      {{#each talks as |talk index|}}
+      <li><a href="#talk-{{index}}">{{talk.title}}</a></li>
+      {{/each}}
+      <li><a href="talk-1">Intelligent Design: Application Architecture of the Human body</a></li>
+      <li><a href="talk-1">Intelligent Design: Application Architecture of the Human body</a></li>
+      <li><a href="talk-1">Intelligent Design: Application Architecture of the Human body</a></li>
+    </ul>
+  </div>
+  <div class="w-60 fl">
+    {{#each talks as |talk index|}}
+      <div id="talk-{{index}}">
+        <div class="talk-details">
+          <h2>{{talk.title}}</h2>
+          <p>{{talk.description}}</p>
+        </div>
+        <div class="presenter-details">
+          {{#with talk.presenter}}
+          <img src="{{iconUrl}}" alt="Profile image for {{name}}"/>
+          <div class="details-wrapper">
+            <p class="name">{{name}}</p>
+            <p class="intro">{{intro}}</p>
+            <ul class="links">
+              <li><a href="https://twitter.com/{{twitter}}"><i class="fa fa-twitter"></i>Twitter</a></li>
+              <li><a href="https://github.com/{{github}}"><i class="fa fa-github"></i></a>Github</li>
+            </ul>
+          </div>
+          {{/with}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
 </section>
 <section id="schedule">
-  <h1>Something goes here</h1>
+  <h1>Schedule</h1>
+  <div class="w-30">
+  </div>
+  <div class="w-70">
+  </div>
 </section>
 <section id="location">
-  <h1>Something goes here</h1>
+  <h1>Location</h1>
 </section>
 <section id="about">
-  <h1>Something goes here</h1>
+  <h1>About</h1>
 </section>
