@@ -4,27 +4,19 @@ header {
   height: 100vh;
   width: 1000px;
   text-align: center;
-  backgroun-color: $black;
+  background-color: $black;
 }
 #talks {
   background-image: url("/img/headers/talks.png");
-  background-size: cover;
-  height: 100vh;
 }
 #schedule {
-  background-image: url("/img/headers/schedule.png");
-  background-size: cover;
-  height: 100vh;
+    background-image: url("/img/headers/schedule.png");
 }
 #location {
   background-image: url("/img/headers/location.png");
-  background-size: cover;
-  height: 100vh;
 }
 #about {
   background-image: url("/img/headers/about.png");
-  background-size: cover;
-  height: 100vh;
 }
 
 img.logo {
@@ -106,24 +98,53 @@ nav {
 section {
   padding: 300px 0 0 100px;
   background-color: $black;
+  background-size: contain;
+  background-repeat: no-repeat;
   h1 {
-    font-size: 50px;
+      font-size: 60px;
+      font-weight: bold;
     text-transform: uppercase;
     color: $yellow;
   }
+  .left-column {
+      @extend .w-40;
+      @extend .fl;
+  }
+  .right-column {
+      @extend .w-60;
+      @extend .fl;
+  }
+
+  .section-content {
+      color: $white;
+      p {
+          padding: 0 0 10px;
+          margin: 0 60px 60px 0;
+          border-bottom: 10px solid $white;
+      }
+  }
 }
 
+$section-padding-right: 160px;
 #talks {
+    .selected-talk {
+        .talk-details {
+            background-color: $yellow;
+            color: $black;
+        }
+        .presenter-details {
+            background-color: $grey;
+        }
+    }
     .talk-details {
-        background-color: $yellow;
-        padding: 30px;
+        color: $yellow;
+        padding: 30px $section-padding-right 30px 30px;
     }
     .presenter-details {
-        padding: 15px;
+        padding: 15px $section-padding-right 15px 15px;
         position: relative;
         top: -4px;
-        margin: -15px 0 0 15px;
-        background-color: $grey;
+        margin: -15px 0 50px 15px;
         color: $white;
         .name {
             font-weight: bold;
@@ -141,6 +162,11 @@ section {
             li {
                 display: inline;
                 color: $white;
+                padding: 0 10px 0 0;
+
+            }
+            li i {
+                padding: 0 5px 0 0;
             }
         }
         img {
@@ -149,6 +175,7 @@ section {
             border-radius: 50%;
         }
         .details-wrapper {
+            padding: 0 0 0 20px;
             display: inline;
             width: 80%;
         }
@@ -157,8 +184,11 @@ section {
     .talk-nav {
         margin: 0;
         padding: 0;
-        word-wrap: break-word;
+        a {
+            white-space: initial;
+        }
     }
+
 }
 
 // strong {
