@@ -6,6 +6,7 @@ const router = express.Router();
 module.exports = router;
 
 const day1 = 'Thursday, 2 June';
+const day2 = 'Friday, 3 June';
 const talks = [
     {
         title: 'Intelligent Design: Application Architecture of the Human body',
@@ -34,6 +35,16 @@ const days = {
               details: 'As the tradition goes, no need for that hotel breakfast! Join us for a Rebel breakfast instead.',
               time: '08:00'
           }
+        ]
+    },
+    [day2]: {
+        description: 'Conference day #2, with 8 more talks starting at 09:00.',
+        schedule: [
+            {
+                title: 'Registration and breakfast',
+                details: 'As the tradition goes, no need for that hotel breakfast! Join us for a Rebel breakfast instead.',
+                time: '08:00'
+            }
         ]
     }
 }

@@ -202,17 +202,24 @@ $section-padding-right: 160px;
     }
 
     .schedule-item {
+        @extend .cf;
         &:hover {
             color: $black;
             background-color: $yellow;
         }
 
         .time {
-            border-right: 2px solid $yellow;
-            padding-right: 20px;
+            padding: 0 10px 10px 0;
+            width: 60px;
         }
         div {
-            display: inline-block;
+            @extend .fl;
+            display: block;
+        }
+        .info {
+            @extend .w-80;
+            padding: 0 0 10px 10px;
+            border-left: 2px solid $yellow;
         }
         .title {
             display: block;

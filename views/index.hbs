@@ -64,11 +64,12 @@
   <div class="right-column">
     {{#each days as |details day|}}
     <h2>{{day}}</h2>
+    <p>{{details.description}}</p>
     <ol class="day-schedule">
        {{#each details.schedule as |item|}}
        <li class="schedule-item">
          <div class="time">{{time}}</div>
-         <div>
+         <div class="info">
            <span class="title">{{item.title}}</span>
            <span class="details">{{item.details}}</span>
          </div>
