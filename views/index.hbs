@@ -22,7 +22,7 @@
     </div>
   </nav>
 </header>
-<section id="talks" class="cf">
+<section id="talks">
   <h1>Talks</h1>
   <div class="left-column section-content">
     <p>Two days, one track, <br/> 16 speakers &amp; 16 talks!</p>
@@ -58,9 +58,24 @@
 </section>
 <section id="schedule">
   <h1>Schedule</h1>
-  <div class="w-30">
+  <div class="left-column section-content">
+    <p>What's happening when. <br /> Changes can occur.</p>
   </div>
-  <div class="w-70">
+  <div class="right-column">
+    {{#each days as |details day|}}
+    <h2>{{day}}</h2>
+    <ol class="day-schedule">
+       {{#each details.schedule as |item|}}
+       <li class="schedule-item">
+         <div class="time">{{time}}</div>
+         <div>
+           <span class="title">{{item.title}}</span>
+           <span class="details">{{item.details}}</span>
+         </div>
+       </li>
+       {{/each}}
+    </ol>
+    {{/each}}
   </div>
 </section>
 <section id="location">

@@ -96,6 +96,7 @@ nav {
 }
 
 section {
+    @extend .cf;
   padding: 300px 0 0 100px;
   background-color: $black;
   background-size: contain;
@@ -189,6 +190,39 @@ $section-padding-right: 160px;
         }
     }
 
+}
+
+#schedule {
+    .right-column {
+        color: $yellow;
+    }
+
+    .day-schedule {
+        list-style: none;
+    }
+
+    .schedule-item {
+        &:hover {
+            color: $black;
+            background-color: $yellow;
+        }
+
+        .time {
+            border-right: 2px solid $yellow;
+            padding-right: 20px;
+        }
+        div {
+            display: inline-block;
+        }
+        .title {
+            display: block;
+            font-weight: bold;
+        }
+        .details {
+            display: block;
+            font-style: italic;
+        }
+    }
 }
 
 // strong {
