@@ -247,6 +247,33 @@ $section-padding-right: 160px;
         font-weight: bold;
     }
 }
+
+#about {
+    .right-column {
+        color: $yellow;
+
+        ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        ol {
+            list-style: none;
+            li::before {
+                content: '-';
+                margin: 0 8px 0 0;
+            }
+        }
+        i {
+            font-size: 70px;
+        }
+    }
+
+    .with-background {
+        background-color: $yellow;
+        color: $black;
+    }
+}
 // strong {
 //     font-weight: 700;
 // }
