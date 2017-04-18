@@ -91,19 +91,25 @@ nav {
 }
 
 .menu {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-top: solid transparent 100vh;
-  border-right: solid $black 250px;
-  width: 0;
-  height: 0;
-  .nav-list {
-    position: relative;
-    bottom: 140px;
-    width: 180px;
-    text-align: right;
-  }
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: solid transparent 100vh;
+    border-right: solid $black 250px;
+    width: 0;
+    height: 0;
+    .nav-list {
+        margin: 0;
+        position: relative;
+        width: 110px;
+        text-align: right;
+        bottom: 140px;
+        left: 90px;
+        @include desktop {
+            bottom: 190px;
+            left: 115px;
+        }
+    }
 }
 
 section {
