@@ -7,7 +7,7 @@
   <div class="menu">
     <ul class="nav-list">
       <li><a href="#tickets">tickets <i class="fa fa-check"></i></a></li>
-      <li><a href="#talks">talks <i class="fa fa-microphone"></i></a></li>
+      <li><a id="talks-btn" href="#talks">talks <i class="fa fa-microphone"></i></a></li>
       <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li>
       <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
       <li><a href="#about">about <i class="fa fa-question"></i></a></li>
@@ -193,7 +193,7 @@
   </form>
 
   <div class="fist-svg-wrapper">
-    {{{fistSvg}}}
+      {{{fistSvg}}}
   </div>
 </footer>
 <script type="text/javascript">
@@ -217,4 +217,50 @@
      talks.forEach(function (talk) { talk.classList.remove('selected-talk')})
      activeTalk.classList.add('selected-talk')
  };
+
+
+ var links = Array.prototype.slice.apply(document.querySelectorAll('a'))
+ var body = document.body
+ var animateTime = 900
+
+ function getPageScroll() {
+     var yScroll;
+
+     if (window.pageYOffset) {
+         yScroll = window.pageYOffset;
+     } else if (document.documentElement && document.documentElement.scrollTop) {
+         yScroll = document.documentElement.scrollTop;
+     } else if (document.body) {
+         yScroll = document.body.scrollTop;
+     }
+     return yScroll;
+ }
+
+ function linkOnClick(event) {
+     var targetEl = document.getElementById(event.target.hash.substr(1))
+     if (!targetEl) { return }
+     var targetOffset = targetEl.offsetTop;
+     var currentPosition = getPageScroll();
+     var diff = targetOffset - currentPosition
+     var change = "-" + diff.toString() +"px"
+     if (diff < 0) {
+         change = (-1 * diff).toString() + "px"
+     }
+     body.classList.add('in-transition');
+     var transform = "translate(0, "+change+")";
+     console.log(transform)
+     body.style.WebkitTransform = transform;
+     body.style.MozTransform = transform;
+     body.style.transform = transform;
+
+     window.setTimeout(function () {
+         body.classList.remove('in-transition');
+         body.style.cssText = "";
+         window.scrollTo(0, targetOffset);
+     }, animateTime);
+
+     event.preventDefault();
+
+ }
+ links.forEach(function(link) { link.addEventListener('click', linkOnClick, false)});
 </script>

@@ -9,6 +9,9 @@
         @content;
     }
 }
+body.in-transition {
+  transition: transform 900ms ease;
+}
 header {
   background-image: url("/img/headers/header.png");
   background-size: cover;
