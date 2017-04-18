@@ -38,7 +38,7 @@
   </div>
   <div class="right-column">
     {{#each talks as |talk index|}}
-      <div id="talk-{{index}}" class="selected-talk">
+      <div id="talk-{{index}}" class="talk">
         <div class="talk-details">
           <h2>{{talk.title}}</h2>
           <p>{{talk.description}}</p>
@@ -193,7 +193,7 @@
   </form>
 
   <div class="fist-svg-wrapper">
-      {{{fistSvg}}}
+    {{{fistSvg}}}
   </div>
 </footer>
 <script type="text/javascript">
@@ -208,5 +208,13 @@
      } else {
          desktopNav.classList.remove('floating');
      }
+
+     var talks = Array.prototype.slice.call(document.querySelectorAll('.talk'))
+     var topPositions = talks.map(function(talk){ return talk.getBoundingClientRect().top })
+     var negPositions = topPositions.filter(function (pos) { return pos - 100 < 0 })
+     var activePos = Math.max.apply(Math, negPositions.concat(topPositions[0]))
+     var activeTalk = talks[topPositions.indexOf(activePos)]
+     talks.forEach(function (talk) { talk.classList.remove('selected-talk')})
+     activeTalk.classList.add('selected-talk')
  };
 </script>
