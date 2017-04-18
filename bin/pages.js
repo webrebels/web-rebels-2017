@@ -50,7 +50,7 @@ const days = {
 }
 
 talks.forEach((talk) => {
-    days[talk.date].schedule.push({title: talk.title, details: talk.description, time: talk.time})
+    days[talk.date].schedule.push({title: talk.title, details: talk.description, time: talk.time});
 })
 
 days[day1].schedule.push({
@@ -59,9 +59,16 @@ days[day1].schedule.push({
     time: '18:00'
 })
 
-const svg = fs.readFileSync(path.resolve(__dirname, '../src/img/wr_letterlogo.svg'), {
-    encoding: 'utf8',
-});
+function readFile (pathToFile) {
+    return fs.readFileSync(
+        path.resolve(__dirname, pathToFile),
+        { encoding: 'utf8' }
+    );
+}
+
+const wrSvg = readFile('../src/img/wr_letterlogo.svg');
+const fistSvg = readFile('../src/img/raised-fist.svg');
+const jsSvg = readFile('../src/img/js_logo.svg');
 
 router.get('/', (req, res) => {
     res.render('index', {
@@ -70,6 +77,8 @@ router.get('/', (req, res) => {
         css: req.css,
         talks: talks,
         days: days,
-        svg: svg
+        wrSvg: wrSvg,
+        fistSvg: fistSvg,
+        jsSvg: jsSvg
     });
 });
