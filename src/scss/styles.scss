@@ -1,3 +1,14 @@
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$desktop-width - 1}) {
+        @content;
+    }
+}
 header {
   background-image: url("/img/headers/header.png");
   background-size: cover;
@@ -31,7 +42,7 @@ img.logo {
 nav {
   display: none;
   background-color: $black;
-  position:absolute;
+  position: absolute;
   bottom: 0;
   width: 100%;
   font-size: 14px;
@@ -63,7 +74,7 @@ nav {
       height: 25px;
       padding: 4px 0 0 0;
   }
-  @media (min-width: 1024px) {
+  @include desktop {
       display: block;
   }
 }
@@ -84,45 +95,63 @@ nav {
   bottom: 0;
   right: 0;
   border-top: solid transparent 100vh;
-  border-right: solid $black 35vh;
+  border-right: solid $black 250px;
   width: 0;
   height: 0;
   .nav-list {
     position: relative;
-    top: -25vh;
-    width: 200px;
+    bottom: 140px;
+    width: 180px;
     text-align: right;
   }
 }
 
 section {
+    $mobile-content-padding: 10px;
     @extend .cf;
     min-height: 1500px;
-    padding: 300px 0 0 100px;
+
+    padding: 300px 0 50px 0;
+    @include desktop {
+        padding: 300px 0 0 100px;
+    }
     background-color: $black;
     background-size: contain;
     background-repeat: no-repeat;
     h1 {
+        @include mobile {
+            padding: 0 0 0 $mobile-content-padding;
+        }
         font-size: 60px;
         font-weight: bold;
         text-transform: uppercase;
         color: $yellow;
     }
-    .left-column {
-        @extend .w-40;
-        @extend .fl;
+    @include desktop {
+        .left-column {
+            width: 40%;
+            float: left;
+        }
+        .right-column {
+            width: 60%;
+            float: left;
+        }
     }
-    .right-column {
-        @extend .w-60;
-        @extend .fl;
+    @include mobile {
+        .left-column {
+            padding: 0 $mobile-content-padding;
+        }
     }
 
     .section-content {
         color: $white;
         p {
             padding: 0 0 10px;
-            margin: 0 60px 60px 0;
-            border-bottom: 10px solid $white;
+            border-bottom: 15px solid $white;
+            @include desktop {
+                margin: 0 60px 60px 0;
+                border-bottom: 10px solid $white;
+            }
         }
     }
 }
@@ -140,10 +169,16 @@ $section-padding-right: 160px;
     }
     .talk-details {
         color: $yellow;
-        padding: 30px $section-padding-right 30px 30px;
+        padding: 30px 10px;
+        @include desktop {
+            padding: 30px $section-padding-right 30px 30px;
+        }
     }
     .presenter-details {
-        padding: 15px $section-padding-right 15px 15px;
+        padding: 15px 10px;
+        @include desktop {
+            padding: 15px $section-padding-right 15px 15px;
+        }
         position: relative;
         top: -4px;
         margin: -15px 0 50px 15px;
@@ -184,7 +219,11 @@ $section-padding-right: 160px;
     }
 
     .talk-nav {
-        margin: 0;
+        margin: 0 0 20px 20px;
+        @include desktop {
+            margin: 0;
+        }
+
         padding: 0;
         a {
             white-space: initial;
@@ -196,10 +235,16 @@ $section-padding-right: 160px;
 #schedule {
     .right-column {
         color: $yellow;
+        padding: 0 10px;
     }
 
     .day-schedule {
         list-style: none;
+        margin: 0;
+        @include desktop {
+            margin: 32px;
+        }
+
     }
 
     .schedule-item {
@@ -262,12 +307,13 @@ $section-padding-right: 160px;
             li::before {
                 content: '-';
                 margin: 0 8px 0 0;
+                display: inline;
             }
         }
         i {
             font-size: 70px;
         }
-        li {
+        .about-sections > li {
             @extend .cf;
             padding: 30px;
         }
