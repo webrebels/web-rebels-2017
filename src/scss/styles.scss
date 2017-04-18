@@ -40,12 +40,14 @@ img.logo {
 }
 
 nav {
+  z-index: 100;
   display: none;
   background-color: $black;
   position: absolute;
   bottom: 0;
   width: 100%;
   font-size: 14px;
+  height: 30px;
 
   div {
       display: inline;
@@ -76,6 +78,10 @@ nav {
   }
   @include desktop {
       display: block;
+  }
+  &.floating {
+      position: fixed;
+      top: 0;
   }
 }
 

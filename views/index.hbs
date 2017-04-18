@@ -13,7 +13,7 @@
       <li><a href="#about">about <i class="fa fa-question"></i></a></li>
     </ul>
   </div>
-  <nav>
+  <nav id="desktop-nav">
     <div>
       <ul class="nav-list">
         <li>{{{wrSvg}}}</li>
@@ -193,6 +193,20 @@
   </form>
 
   <div class="fist-svg-wrapper">
-    {{{fistSvg}}}
+      {{{fistSvg}}}
   </div>
 </footer>
+<script type="text/javascript">
+ var docEl = document.documentElement
+ var header = document.getElementById('top')
+ var desktopNav = document.getElementById('desktop-nav')
+
+ window.onscroll = function () {
+     var sTop = (this.pageYOffset || docEl.scrollTop)  - (docEl.clientTop || 0);
+     if (header.getBoundingClientRect().bottom < 0) {
+         desktopNav.classList.add('floating');
+     } else {
+         desktopNav.classList.remove('floating');
+     }
+ };
+</script>
