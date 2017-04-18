@@ -69,7 +69,13 @@ function readFile (pathToFile) {
 const wrSvg = readFile('../src/img/wr_letterlogo.svg');
 const fistSvg = readFile('../src/img/raised-fist.svg');
 const jsSvg = readFile('../src/img/js_logo.svg');
+let css
+if (process.env.NODE_ENV === 'production') {
+    css = `<style>${readFile('../public/main.css')}</style>`;
+} else {
+    css = '<script src="http://localhost:8080/main.js"></script>';
 
+}
 router.get('/', (req, res) => {
     res.render('index', {
         pageTitle: 'Web Rebels ☠ Oslo ☠ June 2017',
@@ -79,6 +85,7 @@ router.get('/', (req, res) => {
         days: days,
         wrSvg: wrSvg,
         fistSvg: fistSvg,
-        jsSvg: jsSvg
+        jsSvg: jsSvg,
+        cssLink: css
     });
 });
