@@ -89,8 +89,35 @@ nav {
     text-decoration: none;
   }
 }
+.menu-icon {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    padding: 0 6px;
+    border-radius: 2px;
+    background-color: $yellow;
+    color: $black;
+    font-size: 20px;
+    @include desktop {
+        display: none;
+    }
+}
+#menu-checkbox {
+    visibility: hidden;
+}
+@include mobile {
+    #menu-checkbox ~ .menu {
+        right: -250px;
+    }
+    #menu-checkbox:checked ~ .menu {
+        right: 0;
+    }
+}
 
 .menu {
+    transition: right 0.4s;
     position: absolute;
     bottom: 0;
     right: 0;
