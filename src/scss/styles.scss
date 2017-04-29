@@ -114,32 +114,40 @@ nav {
     }
 }
 #menu-checkbox {
-    visibility: hidden;
+  visibility: hidden;
 }
+$menu-width: 280px;
 @include mobile {
-    #menu-checkbox ~ .menu {
-        right: -250px;
-    }
-    #menu-checkbox:checked ~ .menu {
-        right: 0;
-    }
+  #menu-checkbox~.menu-wrapper .menu {
+    right: -$menu-width;
+  }
+
+  #menu-checkbox:checked~.menu-wrapper .menu {
+    right: 0;
+  }
+}
+.menu-wrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .menu {
     transition: right 0.4s;
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
     border-top: solid transparent 100vh;
-    border-right: solid $black 250px;
+    border-right: solid $black $menu-width;
     width: 0;
     height: 0;
     .nav-list {
         margin: 0;
         position: relative;
-        width: 110px;
+        width: 150px;
         text-align: right;
-        bottom: 140px;
+        bottom: 170px;
         left: 90px;
         @include desktop {
             bottom: 190px;
