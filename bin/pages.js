@@ -69,6 +69,7 @@ function readFile (pathToFile) {
 const wrSvg = readFile('../src/img/wr_letterlogo.svg');
 const fistSvg = readFile('../src/img/raised-fist.svg');
 const jsSvg = readFile('../src/img/js_logo.svg');
+const scrollScript = readFile('../src/js/zenscroll-min.js')
 let css
 if (process.env.NODE_ENV === 'production') {
     css = `<style>${readFile('../public/main.css')}</style>`;
@@ -86,6 +87,7 @@ router.get('/', (req, res) => {
         wrSvg: wrSvg,
         fistSvg: fistSvg,
         jsSvg: jsSvg,
-        cssLink: css
+        cssLink: css,
+        scrollScript
     });
 });
