@@ -73,18 +73,22 @@ header {
     a {
       border-top: solid transparent 5px;
       padding: 0 20px;
-      margin: 0 20px;
+      margin: 0 40px;
     }
 
     a:hover,
     a:focus {
       border-top: solid 8px rgb(244, 219, 25);
     }
-    svg {
-      fill: $yellow;
-      height: 25px;
-      padding: 4px 0 0 0;
+    .fist-icon {
+      padding-right: 50px;
+      svg {
+        fill: $yellow;
+        height: 25px;
+        padding: 4px 0 0 0;
+      }
     }
+
     @include desktop {
       display: block;
     }
@@ -262,8 +266,8 @@ $section-padding-right: 160px;
             }
         }
         img {
-            width: 20%;
-            height: 20%;
+            width: 17%;
+            height: 17%;
             border-radius: 50%;
         }
         .details-wrapper {
