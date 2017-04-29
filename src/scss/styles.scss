@@ -1,17 +1,35 @@
 @mixin desktop {
-    @media (min-width: $desktop-width) {
-        @content;
-    }
+  @media (min-width: $desktop-width) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @media (max-width: #{$desktop-width - 1}) {
-        @content;
-    }
+  @media (max-width: #{$desktop-width - 1}) {
+    @content;
+  }
 }
+
 body.in-transition {
   transition: transform 900ms ease;
 }
+
+#talks {
+  background-image: url("/img/headers/talks.png");
+}
+
+#schedule {
+  background-image: url("/img/headers/schedule.png");
+}
+
+#location {
+  background-image: url("/img/headers/location.png");
+}
+
+#about {
+  background-image: url("/img/headers/about.png");
+}
+
 header {
   background-image: url("/img/headers/header.png");
   background-size: cover;
@@ -19,86 +37,73 @@ header {
   width: 1000px;
   text-align: center;
   background-color: $black;
-}
-#talks {
-  background-image: url("/img/headers/talks.png");
-}
-#schedule {
-    background-image: url("/img/headers/schedule.png");
-}
-#location {
-  background-image: url("/img/headers/location.png");
-}
-#about {
-  background-image: url("/img/headers/about.png");
-}
 
-img.logo {
-  margin: 0 auto;
-  min-width: 200px;
-  max-width: 500px;
-  width: 40%;
-  position: relative;
-  top: 40vh;
-}
+  img.logo {
+    margin: 0 auto;
+    min-width: 200px;
+    max-width: 500px;
+    width: 40%;
+    position: relative;
+    top: 40vh;
+  }
 
-nav {
-  z-index: 100;
-  display: none;
-  background-color: $black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-size: 14px;
-  height: 30px;
+  nav {
+    z-index: 100;
+    display: none;
+    background-color: $black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    height: 30px;
 
-  div {
+    div {
       display: inline;
       margin: 0 auto;
-  }
-  ul {
+    }
+    ul {
       margin: 0;
       display: table-row;
-  }
+    }
 
-  li {
+    li {
       display: table-cell;
       vertical-align: middle;
-  }
-  a {
+    }
+    a {
       border-top: solid transparent 5px;
       padding: 0 20px;
       margin: 0 20px;
-  }
-  a:hover,
-  a:focus {
-      border-top: solid 8px rgb(244,219,25);
-  }
-  svg {
+    }
+
+    a:hover,
+    a:focus {
+      border-top: solid 8px rgb(244, 219, 25);
+    }
+    svg {
       fill: $yellow;
       height: 25px;
       padding: 4px 0 0 0;
-  }
-  @include desktop {
+    }
+    @include desktop {
       display: block;
-  }
-  &.floating {
+    }
+    &.floating {
       position: fixed;
       top: 0;
+    }
   }
-}
 
-
-.nav-list {
+  .nav-list {
     text-transform: uppercase;
-  li {
-    list-style: none;
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
   }
-  a {
-    text-decoration: none;
-  }
-}
-.menu-icon {
+  .menu-icon {
     cursor: pointer;
     z-index: 100;
     position: absolute;
@@ -110,30 +115,30 @@ nav {
     color: $black;
     font-size: 20px;
     @include desktop {
-        display: none;
+      display: none;
     }
-}
-#menu-checkbox {
-  visibility: hidden;
-}
-$menu-width: 280px;
-@include mobile {
-  #menu-checkbox~.menu-wrapper .menu {
-    right: -$menu-width;
   }
+  #menu-checkbox {
+    visibility: hidden;
+  }
+  $menu-width: 280px;
+  @include mobile {
+    #menu-checkbox~.menu-wrapper .menu {
+      right: -$menu-width;
+    }
 
-  #menu-checkbox:checked~.menu-wrapper .menu {
+    #menu-checkbox:checked~.menu-wrapper .menu {
+      right: 0;
+    }
+  }
+  .menu-wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
     right: 0;
   }
-}
-.menu-wrapper {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
-.menu {
+  .menu {
     transition: right 0.4s;
     position: relative;
     bottom: 0;
@@ -143,17 +148,18 @@ $menu-width: 280px;
     width: 0;
     height: 0;
     .nav-list {
-        margin: 0;
-        position: relative;
-        width: 150px;
-        text-align: right;
-        bottom: 170px;
-        left: 90px;
-        @include desktop {
-            bottom: 190px;
-            left: 115px;
-        }
+      margin: 0;
+      position: relative;
+      width: 150px;
+      text-align: right;
+      bottom: 170px;
+      left: 90px;
+      @include desktop {
+        bottom: 190px;
+        left: 115px;
+      }
     }
+  }
 }
 
 section {
@@ -250,7 +256,6 @@ $section-padding-right: 160px;
                 display: inline;
                 color: $white;
                 padding: 0 10px 0 0;
-
             }
             li i {
                 padding: 0 5px 0 0;
@@ -279,7 +284,6 @@ $section-padding-right: 160px;
             white-space: initial;
         }
     }
-
 }
 
 #schedule {
@@ -294,7 +298,6 @@ $section-padding-right: 160px;
         @include desktop {
             margin: 32px;
         }
-
     }
 
     .schedule-item {
@@ -363,7 +366,7 @@ $section-padding-right: 160px;
         i {
             font-size: 70px;
         }
-        .about-sections > li {
+        .about-sections>li {
             @extend .cf;
             padding: 30px;
         }
@@ -381,7 +384,8 @@ $section-padding-right: 160px;
         color: $black;
     }
 
-    .js-svg-wrapper, .fist-svg-wrapper {
+    .js-svg-wrapper,
+    .fist-svg-wrapper {
         width: 70px;
     }
 
