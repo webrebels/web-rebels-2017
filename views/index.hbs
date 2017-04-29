@@ -324,6 +324,7 @@
  var waitingForFrame = false
  var linkTimeout = null
  var talks = Array.prototype.slice.call(document.querySelectorAll('.talk'))
+ var sections = Array.prototype.slice.call(document.querySelectorAll('section'))
 
  function updateOnScroll () {
    var sTop = (this.pageYOffset || docEl.scrollTop)  - (docEl.clientTop || 0);
@@ -339,6 +340,15 @@
    var activeTalk = talks[topPositions.indexOf(activePos)]
    talks.forEach(function (talk) { talk.classList.remove('selected-talk')})
    activeTalk.classList.add('selected-talk')
+
+   sections.forEach(function (section) {
+     var rect = section.getBoundingClientRect()
+     if (rect.top <= 0 && rect.top + rect.height) {
+       section.classList.add('active-section')
+     } else {
+       section.classList.remove('active-section')
+     }
+   })
    waitingForFrame = false
  }
 

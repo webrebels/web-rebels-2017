@@ -10,9 +10,6 @@
   }
 }
 
-body.in-transition {
-  transition: transform 900ms ease;
-}
 
 #talks {
   background-image: url("/img/headers/talks.png");
@@ -213,6 +210,10 @@ section {
                 border-bottom: 10px solid $white;
             }
         }
+    }
+
+    &.active-section {
+      background-attachment: fixed;
     }
 }
 
