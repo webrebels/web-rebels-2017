@@ -9,7 +9,7 @@
       <ul class="nav-list">
         <li><a href="https://ti.to/webrebels/2017">tickets <i class="fa fa-check"></i></a></li>
         <li><a id="talks-btn" href="#talks">talks <i class="fa fa-microphone"></i></a></li>
-        <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li>
+        <!-- <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li> -->
         <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
         <li><a href="#about">about <i class="fa fa-question"></i></a></li>
       </ul>
@@ -21,7 +21,7 @@
         <li>{{{wrSvg}}}</li>
         <li><a href="https://ti.to/webrebels/2017">tickets <i class="fa fa-check"></i></a></li>
         <li><a href="#talks">talks <i class="fa fa-microphone"></i></a></li>
-        <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li>
+        <!-- <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li> -->
         <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
         <li><a href="#about">about <i class="fa fa-question"></i></a></li>
       </ul>
@@ -62,29 +62,7 @@
     {{/each}}
   </div>
 </section>
-<section id="schedule">
-  <h1>Schedule</h1>
-  <div class="left-column section-content">
-    <p>What's happening when. <br /> Changes can occur.</p>
-  </div>
-  <div class="right-column">
-    {{#each days as |details day|}}
-    <h2>{{day}}</h2>
-    <p>{{details.description}}</p>
-    <ol class="day-schedule">
-       {{#each details.schedule as |item|}}
-       <li class="schedule-item">
-         <div class="time">{{time}}</div>
-         <div class="info">
-           <span class="title">{{item.title}}</span>
-           <span class="details">{{item.details}}</span>
-         </div>
-       </li>
-       {{/each}}
-    </ol>
-    {{/each}}
-  </div>
-</section>
+{{!> schedule}}
 <section id="location">
   <h1>Location</h1>
   <div class="left-column section-content">
