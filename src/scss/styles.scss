@@ -402,10 +402,26 @@ $section-padding-right: 160px;
 }
 
 #sponsors {
-    background-color: $yellow;
-    h1 {
-        color: $black;
-    }
+  background-color: $yellow;
+  min-height: 1000px;
+  h1 {
+    color: $black;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 60px 60px 0;
+  }
+  li {
+    display: inline;
+    width: 200px;
+    height: 100px;
+  }
+  img {
+    width: 200px;
+    height: 100px;
+  }
 }
 
 footer {
