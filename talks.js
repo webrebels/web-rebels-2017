@@ -9,7 +9,7 @@ const talks = [
           intro: 'Arne Martin is a web developer and partner at a very small agency in Trondheim, where he lives with his wife and daughter and pet polar bear. He sings both in and out of the shower.',
           twitter: 'arnemart',
           github: '',
-          iconUrl: '/img/speakers/arne.martin.aurlien.jpg'
+          iconUrl: '/img/speakers/arne_martin_aurlien.jpg'
         }],
         date: day1,
         time: '09:45',
@@ -22,7 +22,7 @@ const talks = [
       intro: 'Benedikt is a JavaScript compiler engineer who loves to tinker with different aspects of programming languages and the various nasty details of their runtimes. At Google he is the Tech Lead of the JavaScript Execution Optimization Team, working on the V8 JavaScript engine that powers both Node.js and Chrome.',
       twitter: 'bmeurer',
       github: '',
-      iconUrl: '/img/speakers/benedikt-meurer.jpg'
+      iconUrl: '/img/speakers/benedikt_meurer.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -35,7 +35,7 @@ const talks = [
       intro: 'I come from a marketing background and changed career a couple of years ago to become a developer. I started my dev career as a Software Developer and consultant @ ThoughtWorks in Sydney, working on various types of projects from small websites for startups to complex softwares for big corporations. I quickly developed a great interest in tinkering with hardware, cutting edge technologies and creative coding. Therefore, I have spent a lot of my personal time over the past few years prototyping projects to mix technology, design and art. I also contribute to the community by writing tutorials about my experiments and by giving talks at meetups and coding bootcamps to share my passion for creative technologies and hopefully motivate developers to explore that space. I recently moved to London in the hope of being part of more innovative projects.',
       twitter: 'charlie__gerard',
       github: 'charliegerard',
-      iconUrl: '/img/speakers/charlie.gerard.jpg'
+      iconUrl: '/img/speakers/charlie_gerard.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -48,7 +48,7 @@ const talks = [
       intro: "Franziska has a Ph.D. in mathematics and is a software engineer on Google’s V8 team. She's an expert on ES6 performance and a Node.js core collaborator. When she's not working hard on making JavaScript and Node faster, she's probably out horseback riding.",
       twitter: 'fhinkel',
       github: '',
-      iconUrl: '/img/speakers/franziska.hinkelmann.jpg'
+      iconUrl: '/img/speakers/franziska_hinkelmann.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -61,7 +61,7 @@ const talks = [
       intro: 'Currently in transition to becoming a proper grey beard, I’m old enough to remember a world without the web, or cyberspace as we used to call it. I’m a web developer by day, working on tools for designers and developers at Flowbyte, and a musician and general digital artist by night. Actually, usually I sleep at night, but you know what I mean.',
       twitter: 'halfbyte',
       github: '',
-      iconUrl: '/img/speakers/jan.krutisch.jpg'
+      iconUrl: '/img/speakers/jan_krutisch.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -74,7 +74,7 @@ const talks = [
       intro: 'Jana Beck is a coffee-fueled engineer at a small open-source and not-for-profit startup called Tidepool, based in the Bay Area of California but with developers on three continents. Tidepool’s mission is to reduce the burden of type 1 diabetes through data technology, and Jana works mostly on Tidepool’s front-end stack (React with redux; D3 for data visualization). When she’s not coding or sleeping, there’s a high probability that Jana is sweating in a gym or a dance studio.',
       twitter: '',
       github: '',
-      iconUrl: '/img/speakers/jana-beck.jpg'
+      iconUrl: '/img/speakers/jana_beck.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -87,7 +87,7 @@ const talks = [
       intro: 'I interned on the React Native team, I rewrote the React devtools, and I’ve given several talks on React & related technologies. I work at Khan Academy on the mobile team, where I work in Swift, ObjC, Java, and Javascript. I love type systems and learning new languages, and I’m deeply invested in improving the experience of programming for everyone.',
       twitter: '',
       github: '',
-      iconUrl: '/img/speakers/jared.forsyth.jpg'
+      iconUrl: '/img/speakers/jared_forsyth.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -121,7 +121,7 @@ In this talk, we’ll show how to extend our mental model of JS dates and times 
 John lives in Charlottesville, VA and likes meta-jokes, milkshakes, and referring to himself in the third person in speaker bios.`,
       twitter: 'jxxf',
       github: '',
-      iconUrl: '/img/speakers/john.feminella.jpg'
+      iconUrl: '/img/speakers/john_feminella.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -135,7 +135,7 @@ John lives in Charlottesville, VA and likes meta-jokes, milkshakes, and referrin
 That’s mostly it.`,
       twitter: '',
       github: '',
-      iconUrl: '/img/speakers/magnús-dæhlen.jpg'
+      iconUrl: '/img/speakers/magnus_daehlen.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -148,7 +148,7 @@ That’s mostly it.`,
       intro: 'Marcy Sutton works as a meta web developer on accessibility tools for other developers at Deque (DQ) Systems, a company focused on digital equality. Marcy is passionate about making the web accessible for everyone. She loves applying her skills and personal values on the axe-core project, speaking at conferences around the world and producing accessibility screencasts for Egghead.io. Her blog, Accessibility Wins, highlights accessible user interfaces and tools, contributing a positive voice to the web development space. When away from the keyboard, Marcy can usually be found hiking, riding a bicycle or snowboarding.',
       twitter: 'marcysutton',
       github: '',
-      iconUrl: '/img/speakers/marcy-sutton.jpg'
+      iconUrl: '/img/speakers/marcy_sutton.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -161,7 +161,7 @@ That’s mostly it.`,
       intro: 'Mariko is an engineer who loves data and knitting. When she is not making software at Scripto, she uses code to help her design textiles & organize a local JavaScript meetup in New York City called BrooklynJS.',
       twitter: '',
       github: '',
-      iconUrl: '/img/speakers/mariko.kosaka.jpg'
+      iconUrl: '/img/speakers/mariko_kosaka.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -180,14 +180,14 @@ We'll be using Node.js but the techniques will work across any programming langu
   He also works on the dat project (https://dat-data.com) where we’re trying to revolutionize how data is being shared and versioned.`,
         twitter: '',
         github: '',
-        iconUrl: '/img/speakers/mathias-buus-madsen.jpg'
+        iconUrl: '/img/speakers/mathias_buus_madsen.jpg'
       },
       {
         name: 'Thomas Watson',
         intro: 'Thomas Watson is an open source Node.js hacker out of Copenhagen, Denmark. He is a member of the Node.js Diagnostics Working Group and is the Node.js Lead at Opbeat – a JavaScript performance analysis and monitoring startup. He maintains over a 100 open source projects, enjoys working with mad science and implementing network protocols in JavaScript.',
         twitter: '',
         github: '',
-        iconUrl: '/img/speakers/thomas-watson.jpg'
+        iconUrl: '/img/speakers/thomas_watson.jpg'
       }
     ],
     date: day1,
@@ -206,7 +206,7 @@ UpRing is a distributed system framework for building applications on top of a C
 He recently got a Ph.D. with a thesis titled "Application Platforms for the Internet of Things". Now he is a Software Architect at nearForm, where he consults for the top brands in world. Matteo is also the author of the Node.js MQTT Broker, Mosca and of the LevelGraph database. He is also co-author of the book "Javascript: Best Practices" edited by FAG, Milan.`,
       twitter: 'mcollina',
       github: '',
-      iconUrl: '/img/speakers/matteo-collina.jpg'
+      iconUrl: '/img/speakers/matteo_collina.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -219,7 +219,7 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
       intro: 'Mike Taylor is a Web Compatibility Engineering Manager at Mozilla, working from Austin, TX. Previously he worked as a Web Opener at Opera Software, which is a funny title for pretty much the same thing (minus the management bit).',
       twitter: '',
       github: '',
-      iconUrl: '/img/speakers/mike.taylor.jpg'
+      iconUrl: '/img/speakers/mike_taylor.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -232,7 +232,7 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
       intro: '',
       twitter: '',
       github: '',
-      iconUrl: '/img/speakers/aquel.vélez.jpg'
+      iconUrl: '/img/speakers/raquel_velez.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -245,7 +245,7 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
       intro: 'Steve is the founding director of the Front-End Engineering Program at the Turing School of Software and Design in Denver, Colorado where he teaches JavaScript and other technologies to aspiring developers. He’s also the lead organizer for DinosaurJS, which is also part of the JSConf Family of Conferences. He’s slowly, but surely, writing a book on Electron. He is a recovering New York City public school teacher and recently learned how to drive a car. Definitely not a lizard.',
       twitter: 'stevekinney',
       github: '',
-      iconUrl: '/img/speakers/steve.kinney.jpg'
+      iconUrl: '/img/speakers/steve_kinney.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -258,7 +258,7 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
       intro: `Suz Hinton is a JavaScript developer who likes to tinker with hardware. Beside of being a technical evangelist at Microsoft she's a maker at heart and no stranger to minor burns from soldering irons and 3D printers. She's a regular contributor to the open source Node.js electronics scene, and enjoys teaching others how to immerse themselves in the nerdiverse.`,
       twitter: '',
       github: '',
-      iconUrl: '/img/speakers/susan-hinton.jpg'
+      iconUrl: '/img/speakers/susan_hinton.jpg'
     }],
     date: day1,
     time: '09:45',
@@ -271,7 +271,7 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
       intro: 'Tibbs recently graduated from the University of West of Scotland with a degree in computer security. She has relocated to Portland, OR, where she evangelizes for privacy and security while doing security assurance work for Portland General Electric. She is passionate about encouraging small children to take the plunge into STEM and about laughing at cats on the internet.',
       twitter: 'whatatiberius',
       github: '',
-      iconUrl: '/img/speakers/tiberius.hefflin.jpg'
+      iconUrl: '/img/speakers/tiberius_hefflin.jpg'
     }],
     date: day1,
     time: '09:45',
