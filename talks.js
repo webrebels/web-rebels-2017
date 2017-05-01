@@ -278,6 +278,10 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
   },
 ];
 
+talks.forEach((talk) => {
+  talk.presenterNames = talk.presenters.map(({name}) => name).join(' & ')
+})
+
 module.exports = {
   day1,
   day2,
