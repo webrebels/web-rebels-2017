@@ -42,15 +42,15 @@
     {{#each talks as |talk index|}}
       <div id="talk-{{index}}" class="talk">
         <div class="talk-details">
-          <h2>{{talk.title}}</h2>
-          <p>{{talk.description}}</p>
+          <h2>{{{talk.title}}}</h2>
+          <p>{{{talk.description}}}</p>
         </div>
         <div class="presenter-details cf">
           {{#each talk.presenters as |presenter index|}}
           <img class="fl w-25" src="{{iconUrl}}" alt="Profile image for {{name}}"/>
           <div class="details-wrapper w-75 fl">
             <p class="name">{{name}}</p>
-            <p class="intro">{{intro}}</p>
+            <p class="intro">{{{intro}}}</p>
             <ul class="links">
               {{#if twitter}}
               <li><a href="https://twitter.com/{{twitter}}"><i class="fa fa-twitter"></i>Twitter</a></li>
