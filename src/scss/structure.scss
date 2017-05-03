@@ -11,7 +11,6 @@
 html {
     box-sizing: border-box;
     color: #3a353a;
-    font-family: 'Rubik', sans-serif;
 }
 
 *, // sass-lint:disable force-pseudo-nesting
@@ -86,7 +85,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Bungee', sans-serif;
     font-weight: normal;
 }
 
@@ -169,8 +167,6 @@ a:focus {
 ------------------------------------------------------- */
 
 header {
-    // color: #3a353a;
-    // background: #FFD123;
     padding-bottom: 3em;
 }
 
