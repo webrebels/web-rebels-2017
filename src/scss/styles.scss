@@ -230,6 +230,9 @@ section {
 
 $section-padding-right: 160px;
 #talks {
+  h2 {
+    font-weight: bold;
+  }
     // .selected-talk {
         .talk-details {
             background-color: rgba($yellow, 1);
@@ -249,6 +252,7 @@ $section-padding-right: 160px;
         }
     }
     .presenter-details {
+      font-style: italic;
         padding: 15px 10px;
         @include desktop {
             padding: 15px $section-padding-right 15px 15px;
