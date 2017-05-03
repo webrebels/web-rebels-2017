@@ -465,6 +465,10 @@ $section-padding-right: 160px;
 }
 
 footer {
+  .footer-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
     padding: 100px 0 200px 0;
     background-color: $black;
     color: $yellow;
