@@ -363,6 +363,7 @@ $section-padding-right: 160px;
 }
 
 #location {
+  padding-bottom: 40px;
     .right-column {
         color: $black;
         padding: 30px $section-padding-right 30px 30px;
@@ -434,6 +435,10 @@ $section-padding-right: 160px;
   min-height: 1000px;
   h1 {
     color: $black;
+  }
+  padding: 100px 0 150px 0;
+  @include desktop {
+    padding: 100px 0 0 150px;
   }
 
   ul {
