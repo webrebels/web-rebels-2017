@@ -54,7 +54,7 @@ header {
     position: absolute;
     bottom: -40px;
     width: 100%;
-    font-size: 14px;
+    font-size: 18pt;
     height: 40px;
 
     div {
@@ -71,14 +71,14 @@ header {
       vertical-align: middle;
     }
     a {
-      border-top: solid transparent 5px;
-      padding: 0 20px;
+      border-top: solid transparent 4px;
+      padding: 3px 20px 0 20px;
       margin: 0 40px;
     }
 
     a:hover,
     a:focus {
-      border-top: solid 8px rgb(244, 219, 25);
+      border-top: solid 4px rgb(244, 219, 25);
     }
     .fist-icon {
       padding-right: 50px;
