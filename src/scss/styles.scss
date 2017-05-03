@@ -126,7 +126,20 @@ header {
     visibility: hidden;
   }
   $menu-width: 280px;
+  .menu-wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
   @include mobile {
+    .menu-wrapper, .menu-icon {
+      position: fixed;
+    }
+    .menu-wrapper {
+      z-index: 90;
+    }
+
     #menu-checkbox~.menu-wrapper .menu {
       right: -$menu-width;
     }
@@ -134,12 +147,6 @@ header {
     #menu-checkbox:checked~.menu-wrapper .menu {
       right: 0;
     }
-  }
-  .menu-wrapper {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 
   .menu {
