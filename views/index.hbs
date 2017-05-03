@@ -348,12 +348,12 @@
      desktopNav.classList.remove('floating');
    }
 
-   var topPositions = talks.map(function(talk){ return talk.getBoundingClientRect().top })
-   var negPositions = topPositions.filter(function (pos) { return pos - 100 < 0 })
-   var activePos = Math.max.apply(Math, negPositions.concat(topPositions[0]))
-   var activeTalk = talks[topPositions.indexOf(activePos)]
-   talks.forEach(function (talk) { talk.classList.remove('selected-talk')})
-   activeTalk.classList.add('selected-talk')
+   /* var topPositions = talks.map(function(talk){ return talk.getBoundingClientRect().top })*/
+   /* var negPositions = topPositions.filter(function (pos) { return pos - 100 < 0 })*/
+   /* var activePos = Math.max.apply(Math, negPositions.concat(topPositions[0]))*/
+   /* var activeTalk = talks[topPositions.indexOf(activePos)]*/
+   /* talks.forEach(function (talk) { talk.classList.remove('selected-talk')})*/
+   /* activeTalk.classList.add('selected-talk')*/
 
    sections.forEach(function (section) {
      var rect = section.getBoundingClientRect()
