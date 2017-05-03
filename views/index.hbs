@@ -341,8 +341,7 @@
  var sections = Array.prototype.slice.call(document.querySelectorAll('section'))
 
  function updateOnScroll () {
-   var sTop = (this.pageYOffset || docEl.scrollTop)  - (docEl.clientTop || 0);
-   if (header.getBoundingClientRect().bottom <= desktopNavHeight) {
+   if (header.getBoundingClientRect().bottom <= 0) {
      desktopNav.classList.add('floating');
    } else {
      desktopNav.classList.remove('floating');
