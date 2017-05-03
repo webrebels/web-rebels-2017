@@ -1,19 +1,19 @@
 const day1 = 'Thursday, 2 June';
 const day2 = 'Friday, 3 June';
 const talks = [
-    {
-      title: 'Compiling (or “transpiling” or whatever) to JS',
-        description: '',
-        presenters: [{
-          name: 'Arne Martin Aurlien',
-          intro: 'Arne Martin is a web developer and partner at a very small agency in Trondheim, where he lives with his wife and daughter and pet polar bear. He sings both in and out of the shower.',
-          twitter: 'arnemart',
-          github: '',
-          iconUrl: '/img/speakers/arne_martin_aurlien.jpg'
-        }],
-        date: day1,
-        time: '09:45',
-    },
+    // {
+    //   title: 'Compiling (or “transpiling” or whatever) to JS',
+    //     description: '',
+    //     presenters: [{
+    //       name: 'Arne Martin Aurlien',
+    //       intro: 'Arne Martin is a web developer and partner at a very small agency in Trondheim, where he lives with his wife and daughter and pet polar bear. He sings both in and out of the shower.',
+    //       twitter: 'arnemart',
+    //       github: '',
+    //       iconUrl: '/img/speakers/arne_martin_aurlien.jpg'
+    //     }],
+    //     date: day1,
+    //     time: '09:45',
+    // },
   {
     title: 'ESnext Performance - Why bother?',
     description: 'ES2015 added a lot of sex appeal to JavaScript, and ES2016/17 make it even more sexy. Babel and friends allow everyone to use ESnext today, but lead to large JavaScript bundles and sluggish page load. To really shine, ESnext features need to be supported natively, and they must be reasonably fast.',
