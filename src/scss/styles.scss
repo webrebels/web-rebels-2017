@@ -150,6 +150,7 @@ header {
   }
 
   .menu {
+    font-size: 21pt;
     transition: right 0.4s;
     position: relative;
     bottom: 0;
@@ -163,7 +164,7 @@ header {
       position: relative;
       width: 150px;
       text-align: right;
-      bottom: 170px;
+      bottom: 190px;
       left: 90px;
       @include desktop {
         bottom: 190px;
