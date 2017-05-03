@@ -92,23 +92,23 @@ const talks = [
     date: day1,
     time: '09:45',
   },
-  {
-    title: 'Who Gives a Fuck About a Monad? Functional Programming for People Who Hate Math',
-    description: 'Functional programming means cleaner code, easier maintenance, and simpler testing, but most of us will never use it because it’s explained in such a complex, mathematical, and confusing way. This talk explains how we can get the benefits of functional programming today — no math required.',
-    presenters: [{
-      name: 'Jason Lengstorf',
-      intro: `Jason Lengstorf is a developer, designer, author, and friendly bear. He’s worked in nearly every role in an agency and uses his 14+ years of experience to offer a unique, cross-functional approach to solving complex problems. He has written several books and dozens of tutorials about development, built and sold a successful web agency, and created award-winning web projects for companies including PlayStation, Intel, and Precision Nutrition.
+//   {
+//     title: 'Who Gives a Fuck About a Monad? Functional Programming for People Who Hate Math',
+//     description: 'Functional programming means cleaner code, easier maintenance, and simpler testing, but most of us will never use it because it’s explained in such a complex, mathematical, and confusing way. This talk explains how we can get the benefits of functional programming today — no math required.',
+//     presenters: [{
+//       name: 'Jason Lengstorf',
+//       intro: `Jason Lengstorf is a developer, designer, author, and friendly bear. He’s worked in nearly every role in an agency and uses his 14+ years of experience to offer a unique, cross-functional approach to solving complex problems. He has written several books and dozens of tutorials about development, built and sold a successful web agency, and created award-winning web projects for companies including PlayStation, Intel, and Precision Nutrition.
 
-Jason is passionate about building better careers by first focusing on building better lives. He focuses on work-life balance, efficiency, processes, and productivity to help people get more done in less time — so they can spend more time on the things that matter most. Jason recently joined IBM Design as a senior front-end developer and mentor to new hires, where he hopes to scale this philosophy throughout one of the largest companies in the world.
+// Jason is passionate about building better careers by first focusing on building better lives. He focuses on work-life balance, efficiency, processes, and productivity to help people get more done in less time — so they can spend more time on the things that matter most. Jason recently joined IBM Design as a senior front-end developer and mentor to new hires, where he hopes to scale this philosophy throughout one of the largest companies in the world.
 
-He lives in Austin, TX, spends most of his disposable income on food and travel, and can often be spotted in the forest foraging for nuts and berries.`,
-      twitter: 'jlengstorf',
-      github: '',
-      iconUrl: ''
-    }],
-    date: day1,
-    time: '09:45',
-  },
+// He lives in Austin, TX, spends most of his disposable income on food and travel, and can often be spotted in the forest foraging for nuts and berries.`,
+//       twitter: 'jlengstorf',
+//       github: '',
+//       iconUrl: ''
+//     }],
+//     date: day1,
+//     time: '09:45',
+//   },
   {
     title: 'Time and Time Again: Fixing Dates in JS',
     description: `In JavaScript, times and dates can take many forms, but none of them represent a complete, unambiguous answer to the simple question “what time is it?”. While almost anyone can look at a clock at determine what time it is, it turns out that humans encode an enormous amount of hidden information into their representations of date and times. Because computers don’t have the benefit of knowing about this hidden information, times can be much more ambiguous.
@@ -211,32 +211,32 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
     date: day1,
     time: '09:45',
   },
-  {
-    title: '',
-    description: '',
-    presenters: [{
-      name: 'Mike Taylor',
-      intro: 'Mike Taylor is a Web Compatibility Engineering Manager at Mozilla, working from Austin, TX. Previously he worked as a Web Opener at Opera Software, which is a funny title for pretty much the same thing (minus the management bit).',
-      twitter: '',
-      github: '',
-      iconUrl: '/img/speakers/mike_taylor.jpg'
-    }],
-    date: day1,
-    time: '09:45',
-  },
-  {
-    title: '',
-    description: '',
-    presenters: [{
-      name: '',
-      intro: '',
-      twitter: '',
-      github: '',
-      iconUrl: '/img/speakers/raquel_velez.jpg'
-    }],
-    date: day1,
-    time: '09:45',
-  },
+  // {
+  //   title: '',
+  //   description: '',
+  //   presenters: [{
+  //     name: 'Mike Taylor',
+  //     intro: 'Mike Taylor is a Web Compatibility Engineering Manager at Mozilla, working from Austin, TX. Previously he worked as a Web Opener at Opera Software, which is a funny title for pretty much the same thing (minus the management bit).',
+  //     twitter: '',
+  //     github: '',
+  //     iconUrl: '/img/speakers/mike_taylor.jpg'
+  //   }],
+  //   date: day1,
+  //   time: '09:45',
+  // },
+  // {
+  //   title: '',
+  //   description: '',
+  //   presenters: [{
+  //     name: '',
+  //     intro: '',
+  //     twitter: '',
+  //     github: '',
+  //     iconUrl: '/img/speakers/raquel_velez.jpg'
+  //   }],
+  //   date: day1,
+  //   time: '09:45',
+  // },
   {
     title: 'Bringing Back the 1990s: The Revenge of JavaScript Style Sheets',
     description: 'JavaScript Style Sheets were an early competitor to CSS. Spoiler alert: CSS won. In the decades since, JSSS has had a growing influence on how we thinking about styling web applications. CSS and SASS cribbed a few moves from JSSS and some emerging approaches are set to bring it back from the dead.',
