@@ -190,7 +190,7 @@ section {
         @include mobile {
             padding: 0 0 0 $mobile-content-padding;
         }
-        font-size: 60px;
+        font-size: 168pt;
         font-weight: bold;
         text-transform: uppercase;
         color: $yellow;
@@ -232,6 +232,7 @@ section {
 $section-padding-right: 160px;
 #talks {
   h2 {
+    font-size: 34pt;
     font-weight: bold;
   }
     // .selected-talk {
@@ -251,8 +252,12 @@ $section-padding-right: 160px;
         @include desktop {
             padding: 30px $section-padding-right 30px 30px;
         }
+        p {
+          font-size: 20pt;
+        }
     }
     .presenter-details {
+      font-size: 20pt;
       font-style: italic;
         padding: 15px 10px;
         @include desktop {
