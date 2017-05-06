@@ -3,5 +3,5 @@ logs
 npm-debug.log*
 .npm
 node_modules
-public
 yarn.lock
+
