@@ -50,7 +50,7 @@ const fistSvg = readFile('../src/img/raised-fist.svg');
 const jsSvg = readFile('../src/img/js_logo.svg');
 const scrollScript = readFile('../src/js/zenscroll-min.js');
 let css;
-if (process.env.NODE_ENV === 'production') {
+if (process.env.HOT_RELOADING !== 'true') {
     css = `<style>${readFile('../public/main.css')}</style>`;
 } else {
     css = '<script src="http://localhost:8080/main.js"></script>';
