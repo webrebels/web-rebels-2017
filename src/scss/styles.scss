@@ -114,12 +114,13 @@ header {
     z-index: 100;
     position: absolute;
     top: 20px;
-    right: 40px;
+    right: 20px;
     padding: 0 6px;
     border-radius: 2px;
     background-color: $yellow;
     color: $black;
-    font-size: 20px;
+    height: 36px;
+    font-size: 30px;
     @include desktop {
       display: none;
     }
@@ -166,11 +167,11 @@ header {
       position: relative;
       width: 150px;
       text-align: right;
-      bottom: 190px;
+      bottom: 140px;
       left: 90px;
       @include desktop {
-        bottom: 190px;
-        left: 115px;
+        bottom: 130px;
+        left: 100px;
       }
     }
   }
