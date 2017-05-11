@@ -518,11 +518,22 @@ $section-padding-right: 160px;
     list-style: none;
     padding: 0;
     margin: 0 60px 60px 0;
+    @include mobile {
+      margin: 0 0 0 2em;
+    }
   }
   li {
     display:inline-block;
-    width: 262px;
-    height: 160px;
+    width: 22%;
+    margin: 10px;
+    @include mobile {
+      width: 44%;
+      margin: 0;
+    }
+    a {
+      margin: 0;
+      padding: 0;
+    }
   }
   img {
     max-width: 100%;
@@ -534,6 +545,9 @@ $section-padding-right: 160px;
     color: $black;
     border-color: $black;
     font-size: 18pt;
+    @include desktop {
+      width: 33%;
+    }
   }
 }
 
