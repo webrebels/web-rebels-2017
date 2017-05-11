@@ -21,7 +21,7 @@
   "homepage": "https://webrebels.org/",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "NODE_ENV=production webpack -p --config ./tools/webpack.config.js",
+    "build": "NODE_ENV=production webpack -p --config ./tools/webpack.config.js && cp src/favicon* public",
     "start-dev": "nf start -j Procfile.dev",
     "start": "node ./bin/server.js",
     "lint:js": "eslint . --ignore-path .gitignore",

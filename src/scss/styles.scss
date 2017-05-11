@@ -77,14 +77,17 @@ header {
       margin: 0 40px;
     }
 
-    a:hover,
     a:focus {
+      color: $white;
+    }
+    a:hover {
       border-top: solid 4px rgb(244, 219, 25);
+      color: $yellow;
     }
     .wr-icon {
       padding-right: 50px;
       svg {
-        fill: $yellow;
+        fill: $white;
         height: 32px;
         padding: 4px 0 0 0;
       }
@@ -96,6 +99,34 @@ header {
     &.floating {
       position: fixed;
       top: 0;
+    }
+
+    .active-section-link {
+      color: $yellow;
+      border-top: solid 4px rgb(244, 219, 25);
+    }
+    .wr-icon a {
+      transition: none;
+      &:hover {
+        border-color: transparent;
+        transition: none;
+        border: none;
+        svg {
+          fill: $yellow;
+        }
+      }
+    }
+    .wr-icon .active-section-link {
+      border-color: transparent;
+      transition: none;
+      &:hover {
+        transition: none;
+        border: none;
+      }
+      border: none;
+      svg {
+        fill: $yellow;
+      }
     }
   }
 
@@ -196,14 +227,15 @@ section {
     background-repeat: no-repeat;
     h1 {
       word-wrap: break-word;
-        @include mobile {
-            padding: 0 0 0 $mobile-content-padding;
-        }
-        font-size: 140pt;
-        margin-bottom: 100px;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $yellow;
+      font-size: 140pt;
+      @include mobile {
+        font-size: 70px;
+        padding: 0 0 0 $mobile-content-padding;
+      }
+      margin-bottom: 100px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $yellow;
     }
     @include desktop {
         .left-column {
@@ -375,6 +407,9 @@ $section-padding-right: 160px;
     .right-column {
         color: $black;
         padding: 30px $section-padding-right 30px 30px;
+        @include mobile {
+          padding: 10px;
+        }
         background-color: $yellow;
     }
 
@@ -392,6 +427,29 @@ $section-padding-right: 160px;
 }
 
 #about {
+  a {
+    color: $black;
+  }
+  a:hover {
+    color: $white;
+  }
+  h4 {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 13px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  ul, ol {
+    margin: 0 0 30px;
+  }
+  li ul, li ol, li p {
+    max-width: 480px;
+  }
     .right-column {
         color: $yellow;
 
@@ -402,7 +460,7 @@ $section-padding-right: 160px;
           margin: 0 0 40px;
         }
 
-        ol {
+        ol, ul {
             list-style: none;
             li::before {
                 content: '-';
@@ -441,6 +499,11 @@ $section-padding-right: 160px;
             fill: $black;
         }
     }
+    @include mobile {
+      .icon {
+        display: none !important;
+      }
+    }
 }
 
 #sponsors {
@@ -458,11 +521,22 @@ $section-padding-right: 160px;
     list-style: none;
     padding: 0;
     margin: 0 60px 60px 0;
+    @include mobile {
+      margin: 0 0 0 2em;
+    }
   }
   li {
     display:inline-block;
-    width: 262px;
-    height: 160px;
+    width: 22%;
+    margin: 10px;
+    @include mobile {
+      width: 44%;
+      margin: 0;
+    }
+    a {
+      margin: 0;
+      padding: 0;
+    }
   }
   img {
     max-width: 100%;
@@ -473,8 +547,10 @@ $section-padding-right: 160px;
   .section-content p {
     color: $black;
     border-color: $black;
-    width: 40%;
     font-size: 18pt;
+    @include desktop {
+      width: 33%;
+    }
   }
 }
 
@@ -491,6 +567,9 @@ footer {
     a {
       color: $yellow;
       //border-bottom: 2px solid $yellow;
+      &:hover {
+        color: $white;
+      }
     }
 
     ul {

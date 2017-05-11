@@ -11,7 +11,7 @@
         <li><a id="talks-btn" href="#talks">talks <i class="fa fa-microphone"></i></a></li>
         <!-- <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li> -->
         <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
-        <!-- <li><a href="#about">about <i class="fa fa-question"></i></a></li> -->
+        <li><a href="#about">about <i class="fa fa-question"></i></a></li>
         <li><a href="#sponsors">sponsors <i class="fa fa-rocket"></i></a></li>
       </ul>
     </div>
@@ -19,12 +19,12 @@
   <nav id="desktop-nav">
     <div>
       <ul class="nav-list">
-        <li class="wr-icon">{{{wrSvg}}}</li>
+        <li class="wr-icon"><a href="#top">{{{wrSvg}}}</a></li>
         <li><a href="https://ti.to/webrebels/2017">tickets <i class="fa fa-check"></i></a></li>
         <li><a href="#talks">talks <i class="fa fa-microphone"></i></a></li>
         <!-- <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li> -->
         <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
-        <!-- <li><a href="#about">about <i class="fa fa-question"></i></a></li> -->
+        <li><a href="#about">about <i class="fa fa-question"></i></a></li>
         <li><a href="#sponsors">sponsors <i class="fa fa-rocket"></i></a></li>
       </ul>
     </div>
@@ -116,7 +116,7 @@
     <!-- </iframe> -->
   </div>
 </section>
-
+{{> about}}
 <section id="sponsors">
   <h1>Sponsors</h1>
   <div class="section-content">
@@ -140,10 +140,19 @@
 <footer>
   <div class="footer-wrapper">
     <h5>Web Rebels</h5>
-    <p>A community driven conference for and by developers who love creating stuff with web technology. Web Rebels is part for the <a href="http://jsconf.com">JSConf family of events</a> and have a <a href="http://jsconf.com/codeofconduct.html">Code of Conduct</a></p>
+    <p>
+      A community driven conference for and by developers who love creating stuff with web technology. Web Rebels is part for the
+      <a href="http://jsconf.com">JSConf family of events</a>
+      and have a
+      <a href="http://jsconf.com/codeofconduct.html">Code of Conduct</a></p>
     <p>Based in Oslo, Norway.</p>
     <h5>Contact</h5>
-    <p>Any questions you might have, please do not hesitate to shoot us an <a href="mailto:boyhowdy[ replace this bracket with a @ ]webrebels.org">e-mail</a> or ask on <a href="http://twitter.com/web_rebels/">Twitter</a>.</p>
+    <p>
+      Any questions you might have, please do not hesitate to shoot us an
+      <a href="mailto:boyhowdy[ replace this bracket with a @ ]webrebels.org">e-mail</a>
+      or ask on
+      <a href="http://twitter.com/web_rebels/">Twitter.</a>
+    </p>
     <h5>Social media</h5>
     <ul>
       <li>
@@ -187,6 +196,7 @@
  var docEl = document.documentElement
  var header = document.getElementById('top')
  var desktopNav = document.getElementById('desktop-nav')
+ var desktopNavLinks = Array.prototype.slice.call(document.querySelectorAll('#desktop-nav a'))
  var desktopNavHeight = desktopNav.getBoundingClientRect().height
  var waitingForFrame = false
  var linkTimeout = null
@@ -206,15 +216,35 @@
    /* var activeTalk = talks[topPositions.indexOf(activePos)]*/
    /* talks.forEach(function (talk) { talk.classList.remove('selected-talk')})*/
    /* activeTalk.classList.add('selected-talk')*/
-
+   var activeSectionLinkSet = false
    sections.forEach(function (section) {
      var rect = section.getBoundingClientRect()
      if (rect.top <= 0 && rect.top + rect.height) {
        section.classList.add('active-section')
+       desktopNavLinks.forEach(function (link) {
+         if (link.href.replace(/^.*#/, '') === section.id) {
+           activeSectionLinkSet = true
+           link.classList.add('active-section-link')
+           console.log(section.id)
+         } else {
+           link.classList.remove('active-section-link')
+         }
+       })
      } else {
        section.classList.remove('active-section')
      }
    })
+
+   if (!activeSectionLinkSet) {
+     desktopNavLinks.forEach(function (link) {
+       if (link.href.indexOf('#top') > -1) {
+         link.classList.add('active-section-link')
+       } else {
+         link.classList.remove('active-section-link')
+       }
+     })
+     console.log('WR icon')
+   }
    waitingForFrame = false
  }
 
