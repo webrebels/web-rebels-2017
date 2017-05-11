@@ -194,6 +194,7 @@
  var docEl = document.documentElement
  var header = document.getElementById('top')
  var desktopNav = document.getElementById('desktop-nav')
+ var desktopNavLinks = Array.prototype.slice.call(document.querySelectorAll('#desktop-nav a'))
  var desktopNavHeight = desktopNav.getBoundingClientRect().height
  var waitingForFrame = false
  var linkTimeout = null
@@ -218,6 +219,13 @@
      var rect = section.getBoundingClientRect()
      if (rect.top <= 0 && rect.top + rect.height) {
        section.classList.add('active-section')
+       desktopNavLinks.forEach(function (link) {
+         if (link.href.replace(/^.*#/, '') ===  section.id) {
+           link.classList.add('active-section-link')
+         } else {
+           link.classList.remove('active-section-link')
+         }
+       })
      } else {
        section.classList.remove('active-section')
      }

@@ -97,6 +97,11 @@ header {
       position: fixed;
       top: 0;
     }
+
+    .active-section-link {
+      color: $yellow;
+      border-top: solid 4px rgb(244, 219, 25);
+    }
   }
 
   .nav-list {
