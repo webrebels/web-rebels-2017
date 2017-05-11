@@ -227,14 +227,15 @@ section {
     background-repeat: no-repeat;
     h1 {
       word-wrap: break-word;
-        @include mobile {
-            padding: 0 0 0 $mobile-content-padding;
-        }
-        font-size: 140pt;
-        margin-bottom: 100px;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $yellow;
+      font-size: 140pt;
+      @include mobile {
+        font-size: 70px;
+        padding: 0 0 0 $mobile-content-padding;
+      }
+      margin-bottom: 100px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $yellow;
     }
     @include desktop {
         .left-column {
