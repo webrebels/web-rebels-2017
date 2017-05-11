@@ -522,6 +522,9 @@ footer {
     a {
       color: $yellow;
       //border-bottom: 2px solid $yellow;
+      &:hover {
+        color: $white;
+      }
     }
 
     ul {
