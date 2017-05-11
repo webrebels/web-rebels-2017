@@ -424,6 +424,29 @@ $section-padding-right: 160px;
 }
 
 #about {
+  a {
+    color: $black;
+  }
+  a:hover {
+    color: $white;
+  }
+  h4 {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 13px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  ul, ol {
+    margin: 0 0 30px;
+  }
+  li ul, li ol, li p {
+    max-width: 480px;
+  }
     .right-column {
         color: $yellow;
 
@@ -434,7 +457,7 @@ $section-padding-right: 160px;
           margin: 0 0 40px;
         }
 
-        ol {
+        ol, ul {
             list-style: none;
             li::before {
                 content: '-';
@@ -472,6 +495,11 @@ $section-padding-right: 160px;
         svg {
             fill: $black;
         }
+    }
+    @include mobile {
+      .icon {
+        display: none !important;
+      }
     }
 }
 
