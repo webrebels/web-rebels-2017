@@ -77,14 +77,17 @@ header {
       margin: 0 40px;
     }
 
-    a:hover,
     a:focus {
+      color: $white;
+    }
+    a:hover {
       border-top: solid 4px rgb(244, 219, 25);
+      color: $yellow;
     }
     .wr-icon {
       padding-right: 50px;
       svg {
-        fill: $yellow;
+        fill: $white;
         height: 32px;
         padding: 4px 0 0 0;
       }
@@ -101,6 +104,29 @@ header {
     .active-section-link {
       color: $yellow;
       border-top: solid 4px rgb(244, 219, 25);
+    }
+    .wr-icon a {
+      transition: none;
+      &:hover {
+        border-color: transparent;
+        transition: none;
+        border: none;
+        svg {
+          fill: $yellow;
+        }
+      }
+    }
+    .wr-icon .active-section-link {
+      border-color: transparent;
+      transition: none;
+      &:hover {
+        transition: none;
+        border: none;
+      }
+      border: none;
+      svg {
+        fill: $yellow;
+      }
     }
   }
 
