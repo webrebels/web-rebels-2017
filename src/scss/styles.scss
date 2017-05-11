@@ -407,6 +407,9 @@ $section-padding-right: 160px;
     .right-column {
         color: $black;
         padding: 30px $section-padding-right 30px 30px;
+        @include mobile {
+          padding: 10px;
+        }
         background-color: $yellow;
     }
 
