@@ -167,10 +167,10 @@ header {
       position: relative;
       width: 150px;
       text-align: right;
-      bottom: 140px;
+      bottom: 170px;
       left: 90px;
       @include desktop {
-        bottom: 130px;
+        bottom: 170px; // Distance to bottom
         left: 100px;
       }
     }
