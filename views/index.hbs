@@ -227,7 +227,6 @@
          if (link.href.replace(/^.*#/, '') === section.id) {
            activeSectionLinkSet = true
            link.classList.add('active-section-link')
-           console.log(section.id)
          } else {
            link.classList.remove('active-section-link')
          }
@@ -245,7 +244,6 @@
          link.classList.remove('active-section-link')
        }
      })
-     console.log('WR icon')
    }
    waitingForFrame = false
  }
@@ -256,5 +254,14 @@
      waitingForFrame = true
    }
  }
+ var menuCheckbox = document.getElementById('menu-checkbox')
+
+ function onLinkClick () {
+     menuCheckbox.checked = false
+ }
+ var menuSideBarLinks = Array.prototype.slice.call(document.querySelectorAll('.menu-wrapper a'))
+ menuSideBarLinks.forEach((link) => {
+    link.addEventListener('click', onLinkClick)
+ })
 </script>
 <script>{{{ scrollScript }}}</script>
