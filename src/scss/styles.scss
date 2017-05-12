@@ -404,6 +404,14 @@ $section-padding-right: 160px;
 }
 
 #location {
+  a {
+    color: $black;
+    border-bottom: $black solid 1px;
+  }
+  a:hover {
+    color: $white;
+    border-bottom: $white solid 1px;
+  }
   font-size: 18pt;
   padding-bottom: 40px;
     .right-column {
@@ -431,9 +439,11 @@ $section-padding-right: 160px;
 #about {
   a {
     color: $black;
+    border-bottom: $black solid 1px;
   }
   a:hover {
     color: $white;
+    border-bottom: $white solid 1px;
   }
   h4 {
     font-size: 34px;
