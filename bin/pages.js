@@ -1,146 +1,71 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-
-
-const css = fs.readFileSync(path.resolve(__dirname, '../public/main.css'), {
-    encoding: 'utf8',
-});
-
+const { day1, day2, talks } = require('../talks')
 const router = express.Router();
 module.exports = router;
 
+const days = {
+    [day1]: {
+        description: 'Welcome to the first day of the conference',
+        schedule: [
+            {
+                title: 'Registration and breakfast',
+                details: 'As the tradition goes, no need for that hotel breakfast! Join us for a Rebel breakfast instead.',
+                time: '08:00',
+            },
+        ],
+    },
+    [day2]: {
+        description: 'Conference day #2, with 8 more talks starting at 09:00.',
+        schedule: [
+            {
+                title: 'Registration and breakfast',
+                details: 'As the tradition goes, no need for that hotel breakfast! Join us for a Rebel breakfast instead.',
+                time: '08:00',
+            },
+        ],
+    },
+};
+
+talks.forEach((talk) => {
+    days[talk.date].schedule.push({ title: talk.title, details: talk.description, time: talk.time });
+});
+
+days[day1].schedule.push({
+    title: '',
+    details: 'Conference dinner and social gathering right next door to the venue.',
+    time: '18:00',
+});
+
+function readFile(pathToFile) {
+    return fs.readFileSync(
+        path.resolve(__dirname, pathToFile),
+        { encoding: 'utf8' }
+    );
+}
+
+const wrSvg = readFile('../src/img/wr_letterlogo.svg');
+const fistSvg = readFile('../src/img/raised-fist.svg');
+const jsSvg = readFile('../src/img/js_logo.svg');
+const scrollScript = readFile('../src/js/zenscroll-min.js');
+let css;
+if (process.env.HOT_RELOADING !== 'true') {
+    css = `<style>${readFile('../public/main.css')}</style>`;
+} else {
+    css = '<script src="http://localhost:8080/main.js"></script>';
+}
 router.get('/', (req, res) => {
     res.render('index', {
         pageTitle: 'Web Rebels ☠ Oslo ☠ June 2017',
         header: 'penthouse',
-        css,
+        css: req.css,
+        talks,
+        days,
+        wrSvg,
+        fistSvg,
+        jsSvg,
+        cssLink: css,
+        scrollScript,
     });
-});
-
-router.get('/home', (req, res) => {
-    res.render('home', {
-        pageTitle: 'Web Rebels ☠ Oslo ☠ June 2017',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/cfp', (req, res) => {
-    res.render('cfp', {
-        pageTitle: 'Web Rebels ☠ Call For Papers',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/about', (req, res) => {
-    res.render('about', {
-        pageTitle: 'Web Rebels ☠ About',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/policies', (req, res) => {
-    res.render('policies', {
-        pageTitle: 'Web Rebels ☠ Policies',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/location', (req, res) => {
-    res.render('location', {
-        pageTitle: 'Web Rebels ☠ Location',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/travel', (req, res) => {
-    res.render('travel', {
-        pageTitle: 'Web Rebels ☠ Traveling',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/tickets', (req, res) => {
-    res.render('tickets', {
-        pageTitle: 'Web Rebels ☠ Ticket Sales 2017',
-        header: 'penthouse',
-        css,
-    });
-});
-
-
-router.get('/speakers', (req, res) => {
-    res.render('speakers', {
-        pageTitle: 'Web Rebels ☠ Speakers 2017',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/oslo', (req, res) => {
-    res.render('oslo', {
-        pageTitle: 'Web Rebels ☠ Survival Guide',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/family', (req, res) => {
-    res.render('family', {
-        pageTitle: 'Web Rebels ☠ Families',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/schedule', (req, res) => {
-    res.render('schedule', {
-        pageTitle: 'Web Rebels ☠ Schedule 2017',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/sponsors', (req, res) => {
-    res.render('sponsors/index', {
-        pageTitle: 'Web Rebels ☠ Sponsors 2017',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/sponsors/packages', (req, res) => {
-    res.render('sponsors/packages', {
-        pageTitle: 'Web Rebels ☠ Sponsorship Options 2017',
-        header: 'penthouse',
-        css,
-    });
-});
-
-router.get('/scholarship', (req, res) => {
-    res.render('scholarship/index', {
-        pageTitle: 'Web Rebels Scholarship Programme',
-        header: 'penthouse',
-        css,
-    });
-});
-
-
-/*
-router.get('/roadbook', (req, res) => {
-    res.render('roadbook', {
-        pageTitle: 'Web Rebels ☠ Speaker Roadbook',
-        header: 'penthouse',
-        css,
-    });
-});
-*/
-router.get('/buytickets', (req, res) => {
-    res.redirect('https://ti.to/webrebels/2017');
 });

@@ -1,30 +1,267 @@
-
-  <div class="oslo mtl">
-    <div class="wrapper">
-      <div class="box">
-        <h2 class="f1 lh-solid">Tickets, tickets, tickets!</h2>
-        <p>Go grab your ticket for this year's conference over on our <a href="/tickets">ticket page</a>.</p>
-      </div>
-      <div class="box">
-        <h2 class="f1 lh-solid">First speakers confirmed</h2>
-        <p class="mbs">We're happy to announce our first batch of speakers: Franziska Hinkelmann, Mariko Kosaka, Matteo Collina, Mike Taylor, and Suz Hinton.</p>
-        <p>Head over to our <a href="/speakers/">speakers page</a> for more information.</p>
-      </div>
-      <div class="box">
-        <h2 class="f1 lh-solid">Call for Papers is now closed</h2>
-        <p>A big thank you to everyone who sent their contributions to our CfP!</p>
-        <p>We will be sending out emails to everyone who paticipated thise week.</p>
-      </div>
-      <div class="box">
-        <h2 class="lh-solid">Want to sponsor us?</h2>
-        <p>You can find <a href="/sponsors/packages/">all the deails about sponsoring right here</a>!<br>
-          If you want
-        to be part of 2017 or got questions about sponsorships, <a href="mailto:sponsors[ at ]webrebels.org">email us</a>.</p>
-        <p>For more information on the conference, please take a look at <a href="/about">our about page</a>.</p>
-      </div>
-      <div class="box">
-        <h2 class="lh-solid">Get the latest news on ticket sales and speakers!</h2>
-        <p>Sign up for <a href="http://webrebels.us3.list-manage1.com/subscribe?u=f515e6756e5ffeffd7a28a60d&id=7d5e649dbe">our newsletter</a> and follow us <a href="//twitter.com/web_rebels">@web_rebels</a>.</p>
-      </div>
+<header class="w-100" id="top">
+  <img class="logo" src="img/wr_logo.svg" alt="">
+  <label for="menu-checkbox" class="menu-icon">
+    <i class="fa fa-bars"></i>
+  </label>
+  <input type="checkbox" id="menu-checkbox" />
+  <div class="menu-wrapper">
+    <div class="menu">
+      <ul class="nav-list">
+        <li><a href="https://ti.to/webrebels/2017">tickets <i class="fa fa-check"></i></a></li>
+        <li><a id="talks-btn" href="#talks">talks <i class="fa fa-microphone"></i></a></li>
+        <!-- <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li> -->
+        <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
+        <li><a href="#about">about <i class="fa fa-question"></i></a></li>
+        <li><a href="#sponsors">sponsors <i class="fa fa-rocket"></i></a></li>
+      </ul>
     </div>
   </div>
+  <nav id="desktop-nav">
+    <div>
+      <ul class="nav-list">
+        <li class="wr-icon"><a href="#top">{{{wrSvg}}}</a></li>
+        <li><a href="https://ti.to/webrebels/2017">tickets <i class="fa fa-check"></i></a></li>
+        <li><a href="#talks">talks <i class="fa fa-microphone"></i></a></li>
+        <!-- <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li> -->
+        <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
+        <li><a href="#about">about <i class="fa fa-question"></i></a></li>
+        <li><a href="#sponsors">sponsors <i class="fa fa-rocket"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section id="talks">
+  <h1>Talks</h1>
+  <div class="left-column section-content">
+    <p>Two days, one track, <br/> 16 speakers &amp; 16 talks!</p>
+    <ul class="talk-nav">
+      {{#each talks as |talk index|}}
+      <li><a href="#talk-{{index}}">{{talk.presenterNames}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="right-column">
+    {{#each talks as |talk index|}}
+      <div id="talk-{{index}}" class="talk">
+        <div class="talk-details">
+          <h2>{{{talk.title}}}</h2>
+          <p>{{{talk.description}}}</p>
+        </div>
+        <div class="presenter-details cf">
+          {{#each talk.presenters as |presenter index|}}
+          <div class="presenter-wrapper cf">
+            <img class="fl w-25" src="{{iconUrl}}" alt="Profile image for {{name}}"/>
+            <div class="details-wrapper w-75 fl">
+              <p class="name">{{name}}</p>
+              <p class="intro">{{{intro}}}</p>
+              <ul class="links">
+                {{#if twitter}}
+                <li><a href="https://twitter.com/{{twitter}}"><i class="fa fa-twitter"></i>Twitter</a></li>
+                {{/if}}
+                {{#if github}}
+                <li><a href="https://github.com/{{github}}"><i class="fa fa-github"></i>Github</a></li>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
+{{!> schedule}}
+<section id="location">
+  <h1>Location</h1>
+  <div class="left-column section-content">
+    <p>Where is the venue and <br/> how do i get there?</p>
+  </div>
+  <div class="right-column">
+    <h4>Welcome to Grünerløkka and Vulkan</h4>
+    <p>
+      Everything related to the conference happens at Vulkan, Grünerløkka,
+      within a 100m radius of the venue:
+      the conference, lunch and the social events.
+    </p>
+    <img src="img/venue.jpg" title="Dansens Hus (House of Dance)" />
+    <h5>Venue</h5>
+    <p>
+      Welcome to “Dansens hus” which is the National Stage for Dance. Located
+      right next door to Mathallen and with it's larger capacity it is an
+      ideal location for our conference for our 5th edition.
+    </p>
+
+    <h5>Lunch at Mathallen</h5>
+    <p>
+      Right next door from Dansens hus is Mathallen which is Oslo’s first
+      gourmet food market and located about 20 meters from the venue. There is
+      a wide selection of gourmet food stores, restaurants, excellent coffee
+      and beer shops. All food served at the conference will be provided from
+      these establishments.
+    </p>
+    <img src="img/mathallen-small.jpg">
+
+    <h5>Accessibility</h5>
+    <p>
+      The venue is wheelchair accessible. The entrance is on the ground floor.
+      If you have any questions about practicalities – or if there is anything
+      we can do to make your attendance possible, please do not hesitate to
+      <a href="mailto:boyhowdy[ replace this bracket with a @]webrebels.org">
+        shoot us an email
+      </a>.
+    </p>
+    <!-- <iframe -->
+    <!-- width="400" -->
+    <!-- height="450" -->
+    <!-- frameborder="0" style="border:0" -->
+    <!-- src="https://www.google.com/maps/embed/v1/place?key=&q=place_id:ChIJZz5sxmVuQUYRQH8r2qkM2Zo" allowfullscreen> -->
+    <!-- </iframe> -->
+  </div>
+</section>
+{{> about}}
+<section id="sponsors">
+  <h1>Sponsors</h1>
+  <div class="section-content">
+    <p>Web Rebels would not be possible<br/> without our awesome sponsors.</p>
+    <ul>
+      <li><a href="https://www.acando.no/"><img src="/img/sponsors/acando.svg" alt="Acando"/></a></li>
+      <li><a href="https://www.bekk.no/"><img src="/img/sponsors/bekk.svg" alt="Bekk"/></a></li>
+      <li><a href="https://computas.no/"><img src="/img/sponsors/computas.svg" alt="Computas" /></a></li>
+      <li><a href="https://www.confirmit.com/"><img src="/img/sponsors/confirmit.svg" alt="Confirmit" /></a></li>
+      <li><a href="https://www.google.com/intl/en/about/"><img src="/img/sponsors/google.svg" alt="Google" /></a></li>
+      <li><a href="https://www.knowit.no/"><img src="/img/sponsors/knowit.svg" alt="Knowit" /></a></li>
+      <li><a href="http://www.kodemaker.no/"><img src="/img/sponsors/kodemaker.svg" alt="Kodemaker" /></a></li>
+      <li><a href="http://www.nearform.com/"><img src="/img/sponsors/nearform.svg" alt="Nearform" /></a></li>
+      <li><a href="https://www.netliferesearch.com/"><img src="/img/sponsors/netlife.svg" alt="Netlife" /></a></li>
+      <li><a href="http://www.systek.no/"><img src="/img/sponsors/systek.svg" alt="Systek" /></a></li>
+      <li><a href="http://www.webstep.no/"><img src="/img/sponsors/webstep.svg" alt="Webstep" /></a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-wrapper">
+    <h5>Web Rebels</h5>
+    <p>
+      A community driven conference for and by developers who love creating stuff with web technology. Web Rebels is part for the
+      <a href="http://jsconf.com">JSConf family of events</a>
+      and have a
+      <a href="http://jsconf.com/codeofconduct.html">Code of Conduct</a></p>
+    <p>Based in Oslo, Norway.</p>
+    <h5>Contact</h5>
+    <p>
+      Any questions you might have, please do not hesitate to shoot us an
+      <a href="mailto:boyhowdy[ replace this bracket with a @ ]webrebels.org">e-mail</a>
+      or ask on
+      <a href="http://twitter.com/web_rebels/">Twitter.</a>
+    </p>
+    <h5>Social media</h5>
+    <ul>
+      <li>
+        <a href="http://twitter.com/web_rebels/">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/channel/UCM9cTs_C0PmTlHXTNrqTpnw">
+          <i class="fa fa-youtube"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/explore/tags/webrebels/">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.flickr.com/photos/webrebels/">
+          <i class="fa fa-flickr"></i></li>
+        </a>
+      <li>
+        <a href="https://github.com/webrebels">
+          <i class="fa fa-github"></i>
+        </a>
+      </li>
+    </ul>
+    <h5>Newsletter</h5>
+    <p>Sign up for <a href="http://webrebels.us3.list-manage1.com/subscribe?u=f515e6756e5ffeffd7a28a60d&id=7d5e649dbe"> our newsletter</a>.</p>
+    <!-- <form> -->
+    <!-- <input type="text" name="email" placeholder="Enter your e-mail..."/> -->
+    <!-- <button type="submit">Sign up</button> -->
+    <!-- </form> -->
+
+    <div class="fist-svg-wrapper">
+        <a href="#top"{{{fistSvg}}}</a>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+ var docEl = document.documentElement
+ var header = document.getElementById('top')
+ var desktopNav = document.getElementById('desktop-nav')
+ var desktopNavLinks = Array.prototype.slice.call(document.querySelectorAll('#desktop-nav a'))
+ var desktopNavHeight = desktopNav.getBoundingClientRect().height
+ var waitingForFrame = false
+ var linkTimeout = null
+ var talks = Array.prototype.slice.call(document.querySelectorAll('.talk'))
+ var sections = Array.prototype.slice.call(document.querySelectorAll('section'))
+
+ function updateOnScroll () {
+   if (header.getBoundingClientRect().bottom <= 0) {
+     desktopNav.classList.add('floating');
+   } else {
+     desktopNav.classList.remove('floating');
+   }
+
+   /* var topPositions = talks.map(function(talk){ return talk.getBoundingClientRect().top })*/
+   /* var negPositions = topPositions.filter(function (pos) { return pos - 100 < 0 })*/
+   /* var activePos = Math.max.apply(Math, negPositions.concat(topPositions[0]))*/
+   /* var activeTalk = talks[topPositions.indexOf(activePos)]*/
+   /* talks.forEach(function (talk) { talk.classList.remove('selected-talk')})*/
+   /* activeTalk.classList.add('selected-talk')*/
+   var activeSectionLinkSet = false
+   sections.forEach(function (section) {
+     var rect = section.getBoundingClientRect()
+     if (rect.top <= 0 && rect.top + rect.height) {
+       section.classList.add('active-section')
+       desktopNavLinks.forEach(function (link) {
+         if (link.href.replace(/^.*#/, '') === section.id) {
+           activeSectionLinkSet = true
+           link.classList.add('active-section-link')
+         } else {
+           link.classList.remove('active-section-link')
+         }
+       })
+     } else {
+       section.classList.remove('active-section')
+     }
+   })
+
+   if (!activeSectionLinkSet) {
+     desktopNavLinks.forEach(function (link) {
+       if (link.href.indexOf('#top') > -1) {
+         link.classList.add('active-section-link')
+       } else {
+         link.classList.remove('active-section-link')
+       }
+     })
+   }
+   waitingForFrame = false
+ }
+
+ window.onscroll = function () {
+   if (!waitingForFrame) {
+     window.requestAnimationFrame(updateOnScroll)
+     waitingForFrame = true
+   }
+ }
+ var menuCheckbox = document.getElementById('menu-checkbox')
+
+ function onLinkClick () {
+     menuCheckbox.checked = false
+ }
+ var menuSideBarLinks = Array.prototype.slice.call(document.querySelectorAll('.menu-wrapper a'))
+ menuSideBarLinks.forEach((link) => {
+    link.addEventListener('click', onLinkClick)
+ })
+</script>
+<script>{{{ scrollScript }}}</script>

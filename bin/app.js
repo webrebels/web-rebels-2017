@@ -55,6 +55,12 @@ if (config.get('env') === 'development') {
     app.use(require('./assets.js')); /* eslint global-require: 0 */
 }
 
+// app.use((req, res, next) => {
+//
+//     console.log('here');
+//     process.exit();
+// })
+
 
 // Set up http server
 module.exports = http.createServer(app);

@@ -11,7 +11,6 @@
 html {
     box-sizing: border-box;
     color: #3a353a;
-    font-family: 'Rubik', sans-serif;
 }
 
 *, // sass-lint:disable force-pseudo-nesting
@@ -86,7 +85,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Bungee', sans-serif;
     font-weight: normal;
 }
 
@@ -95,9 +93,8 @@ img {
 }
 
 a {
-    border-bottom: 2px solid #CC07C7;
     box-shadow: inset 0 0 0 transparent;
-    color: #B20FAE;
+    color: #fff;
     margin: 0 -2px;
     padding: 2px 3px;
     text-decoration: none;
@@ -111,8 +108,7 @@ a {
 
 a:hover,
 a:focus {
-    box-shadow: inset 0 -1.6em 0 #CC07C7;
-    color: #fff;
+    color: rgb(244,219,25);
 }
 
 
@@ -171,8 +167,6 @@ a:focus {
 ------------------------------------------------------- */
 
 header {
-    color: #3a353a;
-    background: #FFD123;
     padding-bottom: 3em;
 }
 

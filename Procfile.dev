@@ -1,0 +1,2 @@
+web: HOT_RELOADING=true nodemon ./bin/server.js
+assets: webpack-dev-server -p --config ./tools/webpack.config.js --inline --hot

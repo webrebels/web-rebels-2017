@@ -1,296 +1,637 @@
-strong {
-    font-weight: 700;
+body {
+  font-family: 'Ubuntu Mono', monospace;
+  line-height: 1.3;
+}
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
 }
 
-.speakers {
-    list-style-type: none;
-    margin: 0;
+@mixin mobile {
+  @media (max-width: #{$desktop-width - 1}) {
+    @content;
+  }
 }
 
-.speaker-link {
-    align-items: flex-end;
-    display: flex;
-    margin-bottom: 20px;
+
+#talks {
+  background-image: url("/img/headers/talks.png");
 }
 
-.speaker-img {
-    height: 48px;
-    margin: 0 15px 0 0;
-    width: 48px;
+#schedule {
+  background-image: url("/img/headers/schedule.png");
 }
 
-.speaker-name {
-    color: #3c3c3a;
+#location {
+  background-image: url("/img/headers/location.png");
 }
 
-.speaker-link:hover .speaker-name {
-    color: #8f4d91;
-    transition: all 0.1s ease 0s;
+#about {
+  background-image: url("/img/headers/about.png");
 }
 
-.tickets-soldout {
-    color: #810000;
+header {
+  background-image: url("/img/headers/header.png");
+  background-size: cover;
+  height: 100vh;
+  width: 1000px;
+  text-align: center;
+  background-color: $black;
+
+  img.logo {
+    margin: 0 auto;
+    min-width: 200px;
+    max-width: 500px;
+    width: 40%;
+    position: relative;
+    top: 40vh;
+  }
+
+  nav {
+    z-index: 100;
+    display: none;
+    background-color: $black;
+    position: absolute;
+    bottom: -36px;
+    width: 100%;
+    font-size: 16pt;
+    height: 36px;
+
+    div {
+      display: inline;
+      margin: 0 auto;
+    }
+    ul {
+      margin: 0;
+      display: table-row;
+    }
+
+    li {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    a {
+      border-top: solid transparent 4px;
+      padding: 3px 20px 0 20px;
+      margin: 0 40px;
+    }
+
+    a:focus {
+      color: $white;
+    }
+    a:hover {
+      border-top: solid 4px rgb(244, 219, 25);
+      color: $yellow;
+    }
+    .wr-icon {
+      padding-right: 50px;
+      svg {
+        fill: $white;
+        height: 32px;
+        padding: 4px 0 0 0;
+      }
+    }
+
+    @include desktop {
+      display: block;
+    }
+    &.floating {
+      position: fixed;
+      top: 0;
+    }
+
+    .active-section-link {
+      color: $yellow;
+      border-top: solid 4px rgb(244, 219, 25);
+    }
+    .wr-icon a {
+      transition: none;
+      &:hover {
+        border-color: transparent;
+        transition: none;
+        border: none;
+        svg {
+          fill: $yellow;
+        }
+      }
+    }
+    .wr-icon .active-section-link {
+      border-color: transparent;
+      transition: none;
+      &:hover {
+        transition: none;
+        border: none;
+      }
+      border: none;
+      svg {
+        fill: $yellow;
+      }
+    }
+  }
+
+  .nav-list {
+    text-transform: uppercase;
     font-weight: bold;
-}
-
-@media screen and (min-width: 600px) {
-    .speakers {
-        display: flex;
-        flex-wrap: wrap;
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .menu-icon {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0 6px;
+    border-radius: 2px;
+    background-color: $yellow;
+    color: $black;
+    height: 36px;
+    font-size: 30px;
+    @include desktop {
+      display: none;
+    }
+  }
+  #menu-checkbox {
+    visibility: hidden;
+  }
+  $menu-width: 280px;
+  .menu-wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  @include mobile {
+    .menu-wrapper, .menu-icon {
+      position: fixed;
+    }
+    .menu-wrapper {
+      z-index: 90;
     }
 
-    .speaker {
+    #menu-checkbox~.menu-wrapper .menu {
+      right: -$menu-width;
+    }
+
+    #menu-checkbox:checked~.menu-wrapper .menu {
+      right: 0;
+    }
+  }
+
+  .menu {
+    font-size: 21pt;
+    transition: right 0.4s;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    border-top: solid transparent 100vh;
+    border-right: solid $black $menu-width;
+    width: 0;
+    height: 0;
+    .nav-list {
+      margin: 0;
+      position: relative;
+      width: 160px;
+      text-align: right;
+      bottom: 210px;
+      left: 90px;
+
+      li {
+        line-height: 32pt;
+      }
+
+      @include desktop {
+        bottom: 210px; // Distance to bottom
+        left: 100px;
+      }
+    }
+  }
+}
+
+section {
+    $mobile-content-padding: 10px;
+    @extend .cf;
+    min-height: 1500px;
+
+    padding: 300px 0 150px 0;
+    @include desktop {
+        padding: 300px 0 0 150px;
+    }
+    background-color: $black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    h1 {
+      word-wrap: break-word;
+      font-size: 140pt;
+      @include mobile {
+        font-size: 70px;
+        padding: 0 0 0 $mobile-content-padding;
+      }
+      margin-bottom: 100px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $yellow;
+    }
+    @include desktop {
+        .left-column {
+            width: 40%;
+            float: left;
+        }
+        .right-column {
+            width: 60%;
+            float: left;
+        }
+    }
+    @include mobile {
+        .left-column {
+            padding: 0 $mobile-content-padding;
+        }
+    }
+
+    .section-content {
+        color: $white;
+        p {
+            padding: 0 0 10px;
+            border-bottom: 15px solid $white;
+            @include desktop {
+                margin: 0 60px 60px 0;
+                border-bottom: 10px solid $white;
+            }
+        }
+    }
+
+    &.active-section {
+      background-attachment: fixed;
+      background-size: cover;
+    }
+}
+
+$section-padding-right: 160px;
+#talks {
+  h2 {
+    font-size: 30pt;
+    font-weight: bold;
+  }
+    // .selected-talk {
+        .talk-details {
+            background-color: rgba($yellow, 1);
+            color: $black;
+        }
+        .presenter-details {
+            background-color: $grey;
+        }
+    // }
+    .talk-details {
+        transition: all 300ms cubic-bezier(0.120, 0.015, 1.000, -0.170);
+        // color: $yellow;
+        padding: 30px 10px;
+        // background-color: rgba($yellow, 0);
+        @include desktop {
+            padding: 30px $section-padding-right 30px 30px;
+        }
+        p {
+          font-size: 18pt;
+        }
+    }
+    .presenter-details {
+      font-size: 16pt;
+      font-style: italic;
+        padding: 15px 10px 0 10px;
+        @include desktop {
+            padding: 15px $section-padding-right 15px 15px;
+        }
+        position: relative;
+        top: -4px;
+        margin: -15px 0 50px 15px;
+        color: $white;
+        .name {
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+        }
+        .intro {
+            padding: 0;
+            margin: 0;
+        }
+
+        .links {
+            list-style: none;
+            margin: 15px 0 0 0;
+            li {
+                display: inline;
+                color: $white;
+                padding: 0 10px 0 0;
+            }
+            li i {
+                padding: 0 5px 0 0;
+            }
+        }
+        img {
+            width: 17%;
+            height: 17%;
+            border-radius: 50%;
+        }
+        .details-wrapper {
+            padding: 0 0 0 20px;
+            display: inline;
+            width: 80%;
+        }
+    }
+    .presenter-wrapper {
+      padding: 0 0 30px 0;
+    }
+    .talk-nav {
+        margin: 0 0 20px 20px;
+        @include desktop {
+            margin: 0;
+        }
+
+        padding: 0;
+        a {
+            white-space: initial;
+        }
+    }
+}
+
+#schedule {
+    .right-column {
+        color: $yellow;
+        padding: 0 10px;
+    }
+
+    .day-schedule {
+        list-style: none;
         margin: 0;
-        width: 50%;
+        @include desktop {
+            margin: 32px;
+        }
     }
 
-    .speaker-link {
-        margin: 0 20px 20px 0;
-    }
+    .schedule-item {
+        @extend .cf;
+        &:hover {
+            color: $black;
+            background-color: $yellow;
+        }
 
-    .speaker-img {
-        height: 80px;
-        width: 80px;
+        .time {
+            padding: 0 10px 10px 0;
+            width: 60px;
+        }
+        div {
+            @extend .fl;
+            display: block;
+        }
+        .info {
+            @extend .w-80;
+            padding: 0 0 10px 10px;
+            border-left: 2px solid $yellow;
+        }
+        .title {
+            display: block;
+            font-weight: bold;
+        }
+        .details {
+            display: block;
+            font-style: italic;
+        }
     }
 }
 
-@media screen and (min-width: 1000px) {
-    .speakers {
-        justify-content: center;
+#location {
+  a {
+    color: $black;
+    border-bottom: $black solid 1px;
+  }
+  a:hover {
+    color: $white;
+    border-bottom: $white solid 1px;
+  }
+  font-size: 18pt;
+  padding-bottom: 40px;
+    .right-column {
+        color: $black;
+        padding: 30px $section-padding-right 30px 30px;
+        @include mobile {
+          padding: 10px;
+        }
+        background-color: $yellow;
     }
 
-    .speaker {
-        text-align: center;
-        width: 25%;
-    }
+    h5 {
+      font-size: 18pt;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: -1.3pt; // "hack" remove space
 
-    .speaker-link {
-        display: block;
-        margin-bottom: 2em;
     }
-
-    .speaker-img {
-        height: auto;
-        margin: 0 0 2px;
-        width: 100%;
+    h4 {
+      font-size: 18pt;
+      font-weight: bold;
     }
 }
 
-// Rebels = speakers on the speaker page
+#about {
+  a {
+    color: $black;
+    border-bottom: $black solid 1px;
+  }
+  a:hover {
+    color: $white;
+    border-bottom: $white solid 1px;
+  }
+  h4 {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 13px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  ul, ol {
+    margin: 0 0 30px;
+  }
+  li ul, li ol, li p {
+    max-width: 480px;
+  }
+    .right-column {
+        color: $yellow;
 
-.rebels {
-    border-top: 6px solid #8f4d91;
-    list-style-type: none;
-    margin-top: 20px;
-    padding-left: 0;
-}
+        ul {
+          list-style: none;
+        }
+        > ul > li {
+          margin: 0 0 40px;
+        }
 
-.rebels > li {
-    border-bottom: 6px solid #8f4d91;
-    padding: 1.5em 0;
-}
-
-.rebel-img {
-    float: left;
-    margin-right: 1em;
-    max-width: 100px;
-}
-
-@media screen and (min-width: 800px) {
-    .rebel-img {
-        max-width: 300px;
+        ol, ul {
+            list-style: none;
+            li::before {
+                content: '-';
+                margin: 0 8px 0 0;
+                display: inline;
+            }
+        }
+        i {
+            font-size: 70px;
+        }
+        .about-sections>li {
+            @extend .cf;
+            padding: 30px;
+        }
+        li div {
+            @extend .fl;
+        }
+        .icon {
+            margin: 0 30px;
+            width: 70px;
+        }
     }
+
+    .with-background {
+        background-color: $yellow;
+        color: $black;
+    }
+
+    .js-svg-wrapper,
+    .fist-svg-wrapper {
+        width: 70px;
+    }
+
+    .fist-svg-wrapper {
+        svg {
+            fill: $black;
+        }
+    }
+    @include mobile {
+      .icon {
+        display: none !important;
+      }
+    }
+}
+
+#sponsors {
+  background-color: $yellow;
+  min-height: 1000px;
+  h1 {
+    color: $black;
+  }
+  padding: 100px 0 150px 0;
+  @include desktop {
+    padding: 100px 0 0 150px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 60px 60px 0;
+    @include mobile {
+      margin: 0 0 0 2em;
+    }
+  }
+  li {
+    display:inline-block;
+    width: 22%;
+    margin: 10px;
+    @include mobile {
+      width: 44%;
+      margin: 0;
+    }
+    a {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    background-color: #fff;
+  }
+
+  .section-content p {
+    color: $black;
+    border-color: $black;
+    font-size: 18pt;
+    @include desktop {
+      width: 33%;
+    }
+  }
 }
 
 footer {
-    background-color: #272327;
-}
-
-footer p.tc a {
-    border: 0;
-    color: #CC07C7;
-    padding: 0 0.3em 0.2em 0.3em;
-    text-decoration: underline;
-}
-
-footer p.tc a:hover,
-footer p.tc a:focus {
-    box-shadow: none;
-    color: #fff;
-}
-
-/* Navigation in footer */
-
-.menu {
-    list-style-type: none;
-    clear: both;
-    padding-left: 0;
-    margin-left: 0;
-}
-
-.menu-item {
-    display: inline-block;
-}
-
-.menu-item a {
-    border-bottom: 0;
-    display: block;
-    padding: 0.5em 1em;
-    color: #fff !important;
-    text-decoration: underline;
-}
-
-.menu-item a:hover,
-.menu-item a:focus {
-    box-shadow: none;
-    color: #CC07C7 !important;
-}
-
-// footer .tc a::before,
-// .menu-item a::before {
-//   content: '»';
-//   font-size: 0.8em;
-//   padding-right: 0.3em;
-// }
-
-// Sponsors
-
-.sponsors {
-    align-items: flex-end;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style-type: none;
-    margin-right: -5px;
-    padding-left: 0;
-}
-
-.sponsors li {
+  .footer-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+    padding: 100px 0 200px 0;
+    background-color: $black;
+    color: $yellow;
     text-align: center;
-    width: 50%;
-}
 
-.sponsors a {
-    display: block;
-    margin: 0 10px 5px 0;
-}
-
-.sponsors img {
-    margin-bottom: 0;
-}
-
-.sponsors a:hover img {
-    opacity: 0.8;
-}
-
-@media screen and (min-width: 800px) {
-    .sponsors li {
-        width: auto;
+    a {
+      color: $yellow;
+      //border-bottom: 2px solid $yellow;
+      &:hover {
+        color: $white;
+      }
     }
 
-    .sponsors a {
-        margin: 0 20px 20px 0;
+    ul {
+        list-style: none;
+        margin: 0;
     }
-}
+    li {
+        display: inline;
+        margin: 0 20px 0 0;
+        font-size: 50px;
+    }
 
+    h5 {
+        font-weight: bold;
+        font-size: 16pt;
+        margin-bottom: -1.3pt;
+        padding-top: 20px;
+        text-transform: uppercase;
+    }
 
-
-/* The conference schedule */
-
-.schedule-last-block {
-    margin-bottom: 3em;
-}
-
-
-.schedule {
-    width: 100%;
-    margin-bottom: 3em;
-    border-collapse: collapse;
-    border-top: 4px solid #525251;
-    border-bottom: 4px solid #525251;
-}
-
-.schedule p {
-    margin-bottom: 0;
-}
-
-.schedule th {
-    padding: 0.5em 1em;
-    vertical-align: text-top;
-}
-
-.schedule td {
-    vertical-align: text-top;
-
-}
-
-.schedule-break {
-    border-top: 2px solid #efefed;
-    border-bottom: 2px solid #efefed;
-    color: #8A8A86;
-}
-
-.schedule-break > td {
-    padding: 0.5em 1em;
-    font-style: italic;
-}
-
-.schedule-talk > td {
-    padding-left: 1em;
-}
-
-.schedule-link {
-    display: block;
-    padding: 0.5em 1em;
-    margin-left: -1em;
-}
-
-a.schedule-link {
-    color: #3C3C36;
-}
-
-.schedule-link:hover {
-    background-color: #efefed;
-    transition: background 0.1s ease-in 0s;
-}
-
-
-.live-stream-wrapper {
-    position: relative;
-    padding-bottom: 56%; /* 16:9 */
-    height: 0;
-    margin-bottom: 20px;
-}
-
-.live-stream-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.tickets {
-    background-color: #fff;
-    border: 2px solid #000;
-    color: #000;
-    cursor: pointer;
-    font-size: 2em;
-    margin-bottom: 2em;
-    margin-left: 2em;
-}
-
-a.tickets:hover,
-a.tickets:focus {
-    box-shadow: inset 0 -2 0 #CC07C7;
-    color: #fff;
-}
-
-@media screen and (max-width: 600px) {
-    .tickets {
+    button {
+        background-color: $yellow;
+        border-radius: 3px;
+        color: $black;
+        border: none;
+        font-size: 18px;
+        width: 250px;
         display: block;
-        margin-bottom: 1em;
-        margin-left: 0;
-        width: 7em;
+        margin: 0 auto;
+        text-transform: uppercase;
+        margin-top: 2px;
+    }
+    input {
+        background-color: $black;
+        border-color: $yellow;
+        border-radius: 3px;
+        color: $yellow;
+        border: solid $yellow 4px;
+        font-size: 18px;
+        width: 250px;
+        &::placeholder {
+            color: $yellow;
+        }
+    }
+
+    .fist-svg-wrapper {
+        padding: 150px 0 0 0;
+        svg {
+            width: 60px;
+            fill: $yellow;
+        }
     }
 }
