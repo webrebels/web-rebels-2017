@@ -1,19 +1,21 @@
 const day1 = 'Thursday, 2 June';
 const day2 = 'Friday, 3 June';
 const talks = [
-    // {
-    //   title: 'Compiling (or “transpiling” or whatever) to JS',
-    //     description: '',
-    //     presenters: [{
-    //       name: 'Arne Martin Aurlien',
-    //       intro: 'Arne Martin is a web developer and partner at a very small agency in Trondheim, where he lives with his wife and daughter and pet polar bear. He sings both in and out of the shower.',
-    //       twitter: 'arnemart',
-    //       github: '',
-    //       iconUrl: '/img/speakers/arne_martin_aurlien.jpg'
-    //     }],
-    //     date: day1,
-    //     time: '09:45',
-    // },
+  {
+    title: 'Compiling (or “transpiling” or whatever) to JS',
+    description: `How do programming languages that compile to JS work? How are they made?
+<br/><br/>
+Let’s find out, together! We will go on a journey where the end result is a brand new compile-to-JS language.`,
+    presenters: [{
+      name: 'Arne Martin Aurlien',
+      intro: 'Arne Martin is a web developer and partner at a very small agency in Trondheim, where he lives with his wife and daughter and pet polar bear. He sings both in and out of the shower.',
+      twitter: 'arnemart',
+      github: '',
+      iconUrl: '/img/speakers/arne_martin_aurlien.jpg'
+    }],
+    date: day1,
+    time: '09:45',
+  },
   {
     title: 'ESnext Performance - Why bother?',
     description: 'ES2015 added a lot of sex appeal to JavaScript, and ES2016/17 make it even more sexy. Babel and friends allow everyone to use ESnext today, but lead to large JavaScript bundles and sluggish page load. <br/><br/>To really shine, ESnext features need to be supported natively, and they must be reasonably fast.',
@@ -92,23 +94,23 @@ const talks = [
     date: day1,
     time: '09:45',
   },
-//   {
-//     title: 'Who Gives a Fuck About a Monad? Functional Programming for People Who Hate Math',
-//     description: 'Functional programming means cleaner code, easier maintenance, and simpler testing, but most of us will never use it because it’s explained in such a complex, mathematical, and confusing way. This talk explains how we can get the benefits of functional programming today — no math required.',
-//     presenters: [{
-//       name: 'Jason Lengstorf',
-//       intro: `Jason Lengstorf is a developer, designer, author, and friendly bear. He’s worked in nearly every role in an agency and uses his 14+ years of experience to offer a unique, cross-functional approach to solving complex problems. He has written several books and dozens of tutorials about development, built and sold a successful web agency, and created award-winning web projects for companies including PlayStation, Intel, and Precision Nutrition.
-
-// Jason is passionate about building better careers by first focusing on building better lives. He focuses on work-life balance, efficiency, processes, and productivity to help people get more done in less time — so they can spend more time on the things that matter most. Jason recently joined IBM Design as a senior front-end developer and mentor to new hires, where he hopes to scale this philosophy throughout one of the largest companies in the world.
-
-// He lives in Austin, TX, spends most of his disposable income on food and travel, and can often be spotted in the forest foraging for nuts and berries.`,
-//       twitter: 'jlengstorf',
-//       github: '',
-//       iconUrl: ''
-//     }],
-//     date: day1,
-//     time: '09:45',
-//   },
+  {
+    title: 'Who Gives a Fuck About a Monad? Functional Programming for People Who Hate Math',
+    description: 'Functional programming means cleaner code, easier maintenance, and simpler testing, but most of us will never use it because it’s explained in such a complex, mathematical, and confusing way. This talk explains how we can get the benefits of functional programming today — no math required.',
+    presenters: [{
+      name: 'Jason Lengstorf',
+      intro: `Jason Lengstorf is a developer, designer, author, and friendly bear. He’s worked in nearly every role in an agency and uses his 14+ years of experience to offer a unique, cross-functional approach to solving complex problems. He has written several books and dozens of tutorials about development, built and sold a successful web agency, and created award-winning web projects for companies including PlayStation, Intel, and Precision Nutrition.
+<br/><br/>
+Jason is passionate about building better careers by first focusing on building better lives. He focuses on work-life balance, efficiency, processes, and productivity to help people get more done in less time — so they can spend more time on the things that matter most. Jason recently joined IBM Design as a senior front-end developer and mentor to new hires, where he hopes to scale this philosophy throughout one of the largest companies in the world.
+<br/><br/>
+He lives in Austin, TX, spends most of his disposable income on food and travel, and can often be spotted in the forest foraging for nuts and berries.`,
+      twitter: 'jlengstorf',
+      github: '',
+      iconUrl: '/img/speakers/jason_lengstorf.jpg'
+    }],
+    date: day1,
+    time: '09:45',
+  },
   {
     title: 'Time and Time Again: Fixing Dates in JS',
     description: `In JavaScript, times and dates can take many forms, but none of them represent a complete, unambiguous answer to the simple question “what time is it?”. While almost anyone can look at a clock at determine what time it is, it turns out that humans encode an enormous amount of hidden information into their representations of date and times. Because computers don’t have the benefit of knowing about this hidden information, times can be much more ambiguous.
@@ -153,19 +155,19 @@ That’s mostly it.`,
     date: day1,
     time: '09:45',
   },
-  // {
-  //   title: '',
-  //   description: '',
-  //   presenters: [{
-  //     name: 'Mariko Kosaka',
-  //     intro: 'Mariko is an engineer who loves data and knitting. When she is not making software at Scripto, she uses code to help her design textiles & organize a local JavaScript meetup in New York City called BrooklynJS.',
-  //     twitter: '',
-  //     github: '',
-  //     iconUrl: '/img/speakers/mariko_kosaka.jpg'
-  //   }],
-  //   date: day1,
-  //   time: '09:45',
-  // },
+  {
+    title: 'TBA',
+    description: '',
+    presenters: [{
+      name: 'Mariko Kosaka',
+      intro: 'Mariko is an engineer who loves data and knitting. When she is not making software at Scripto, she uses code to help her design textiles & organize a local JavaScript meetup in New York City called BrooklynJS.',
+      twitter: '',
+      github: '',
+      iconUrl: '/img/speakers/mariko_kosaka.jpg'
+    }],
+    date: day1,
+    time: '09:45',
+  },
   {
     title: 'Workshop: Learn to P2P',
     description: `Come join the latest chapter in our series of "Learn to P2P" workshops. <br/><br/> The focus will be how to build systems that support streaming and sharing of real time data. The workshop will consist of a series of small iterative exercises that will take you through the basics of networking and distributed systems, all the way to learning how you can make your own P2P TV and radio stations.
@@ -211,32 +213,32 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
     date: day1,
     time: '09:45',
   },
-  // {
-  //   title: '',
-  //   description: '',
-  //   presenters: [{
-  //     name: 'Mike Taylor',
-  //     intro: 'Mike Taylor is a Web Compatibility Engineering Manager at Mozilla, working from Austin, TX. Previously he worked as a Web Opener at Opera Software, which is a funny title for pretty much the same thing (minus the management bit).',
-  //     twitter: '',
-  //     github: '',
-  //     iconUrl: '/img/speakers/mike_taylor.jpg'
-  //   }],
-  //   date: day1,
-  //   time: '09:45',
-  // },
-  // {
-  //   title: '',
-  //   description: '',
-  //   presenters: [{
-  //     name: '',
-  //     intro: '',
-  //     twitter: '',
-  //     github: '',
-  //     iconUrl: '/img/speakers/raquel_velez.jpg'
-  //   }],
-  //   date: day1,
-  //   time: '09:45',
-  // },
+  {
+    title: 'TBA',
+    description: '',
+    presenters: [{
+      name: 'Mike Taylor',
+      intro: 'Mike Taylor is a Web Compatibility Engineering Manager at Mozilla, working from Austin, TX. Previously he worked as a Web Opener at Opera Software, which is a funny title for pretty much the same thing (minus the management bit).',
+      twitter: '',
+      github: '',
+      iconUrl: '/img/speakers/mike_taylor.jpg'
+    }],
+    date: day1,
+    time: '09:45',
+  },
+  {
+    title: 'TBA',
+    description: '',
+    presenters: [{
+      name: 'Raquel Vélez',
+      intro: '',
+      twitter: 'rockbot',
+      github: '',
+      iconUrl: '/img/speakers/raquel_velez.jpg'
+    }],
+    date: day1,
+    time: '09:45',
+  },
   {
     title: 'Bringing Back the 1990s: The Revenge of JavaScript Style Sheets',
     description: 'JavaScript Style Sheets were an early competitor to CSS. Spoiler alert: CSS won. In the decades since, JSSS has had a growing influence on how we thinking about styling web applications. CSS and SASS cribbed a few moves from JSSS and some emerging approaches are set to bring it back from the dead.',
@@ -250,19 +252,19 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
     date: day1,
     time: '09:45',
   },
-  // {
-  //   title: '',
-  //   description: '',
-  //   presenters: [{
-  //     name: 'Suz Hinton',
-  //     intro: `Suz Hinton is a JavaScript developer who likes to tinker with hardware. Beside of being a technical evangelist at Microsoft she's a maker at heart and no stranger to minor burns from soldering irons and 3D printers. She's a regular contributor to the open source Node.js electronics scene, and enjoys teaching others how to immerse themselves in the nerdiverse.`,
-  //     twitter: '',
-  //     github: '',
-  //     iconUrl: '/img/speakers/susan_hinton.jpg'
-  //   }],
-  //   date: day1,
-  //   time: '09:45',
-  // },
+  {
+    title: 'TBA',
+    description: '',
+    presenters: [{
+      name: 'Suz Hinton',
+      intro: `Suz Hinton is a JavaScript developer who likes to tinker with hardware. <br/><br/>Beside of being a technical evangelist at Microsoft she's a maker at heart and no stranger to minor burns from soldering irons and 3D printers. She's a regular contributor to the open source Node.js electronics scene, and enjoys teaching others how to immerse themselves in the nerdiverse.`,
+      twitter: '',
+      github: '',
+      iconUrl: '/img/speakers/susan_hinton.jpg'
+    }],
+    date: day1,
+    time: '09:45',
+  },
   {
     title: 'Security Starts With You: Social Engineering',
     description: 'Virus? There’s an app for that. Malware? There’s an app for that. Social engineering? It’s a little more complicated. <br/><br/>Aimed at average users who could be targeted by such an attack, I will look at the tools of social engineering, how to avoid them & why companies fail to prep employees for attacks.',
