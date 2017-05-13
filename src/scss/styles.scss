@@ -142,7 +142,7 @@ header {
   }
   .menu-icon {
     cursor: pointer;
-    z-index: 100;
+    z-index: 1666;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -164,22 +164,24 @@ header {
     overflow: hidden;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -300px;
+    transition: right 0.4s;
   }
   @include mobile {
     .menu-wrapper, .menu-icon {
       position: fixed;
-    }
-    .menu-wrapper {
-      z-index: 90;
     }
 
     #menu-checkbox~.menu-wrapper .menu {
       right: -$menu-width;
     }
 
-    #menu-checkbox:checked~.menu-wrapper .menu {
+    #menu-checkbox:checked~.menu-wrapper {
+      z-index: 666;
       right: 0;
+      .menu {
+        right: 0;
+      }
     }
   }
 
