@@ -158,13 +158,22 @@ That’s mostly it.`,
   {
     title: 'TBA',
     description: '',
-    presenters: [{
-      name: 'Mariko Kosaka',
-      intro: 'Mariko is an engineer who loves data and knitting. When she is not making software at Scripto, she uses code to help her design textiles & organize a local JavaScript meetup in New York City called BrooklynJS.',
-      twitter: '',
-      github: '',
-      iconUrl: '/img/speakers/mariko_kosaka.jpg'
-    }],
+    presenters: [
+      {
+        name: 'Mariko Kosaka',
+        intro: 'Mariko is an engineer who loves data and knitting. When she is not making software at Scripto, she uses code to help her design textiles & organize a local JavaScript meetup in New York City called BrooklynJS.',
+        twitter: '',
+        github: '',
+        iconUrl: '/img/speakers/mariko_kosaka.jpg'
+      },
+      {
+        name: 'Suz Hinton',
+        intro: `Suz Hinton is a JavaScript developer who likes to tinker with hardware. <br/><br/>Beside of being a technical evangelist at Microsoft she's a maker at heart and no stranger to minor burns from soldering irons and 3D printers. She's a regular contributor to the open source Node.js electronics scene, and enjoys teaching others how to immerse themselves in the nerdiverse.`,
+        twitter: '',
+        github: '',
+        iconUrl: '/img/speakers/susan_hinton.jpg'
+      }
+    ],
     date: day1,
     time: '09:45',
   },
@@ -248,19 +257,6 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
       twitter: 'stevekinney',
       github: '',
       iconUrl: '/img/speakers/steve_kinney.jpg'
-    }],
-    date: day1,
-    time: '09:45',
-  },
-  {
-    title: 'TBA',
-    description: '',
-    presenters: [{
-      name: 'Suz Hinton',
-      intro: `Suz Hinton is a JavaScript developer who likes to tinker with hardware. <br/><br/>Beside of being a technical evangelist at Microsoft she's a maker at heart and no stranger to minor burns from soldering irons and 3D printers. She's a regular contributor to the open source Node.js electronics scene, and enjoys teaching others how to immerse themselves in the nerdiverse.`,
-      twitter: '',
-      github: '',
-      iconUrl: '/img/speakers/susan_hinton.jpg'
     }],
     date: day1,
     time: '09:45',
