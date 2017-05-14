@@ -69,3 +69,13 @@ router.get('/', (req, res) => {
         scrollScript,
     });
 });
+
+
+router.get('/roadbook', (req, res) => {
+    res.render('roadbook', {
+        pageTitle: 'Web Rebels ☠ Oslo ☠ June 2017',
+        header: 'penthouse',
+        css: req.css,
+        cssLink: css
+    });
+});
