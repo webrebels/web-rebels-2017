@@ -215,7 +215,7 @@ UpRing is a distributed system framework for building applications on top of a C
       name: 'Matteo Collina',
       intro: `Matteo is a code pirate and mad scientist. He spends most of his days programming in node.js, but in the past he worked with Ruby, Java and Objective‑C.<br/><br/>
 He recently got a Ph.D. with a thesis titled "Application Platforms for the Internet of Things". Now he is a Software Architect at nearForm, where he consults for the top brands in world. Matteo is also the author of the Node.js MQTT Broker, Mosca and of the LevelGraph database. He is also co-author of the book "Javascript: Best Practices" edited by FAG, Milan.`,
-      twitter: 'mcollina',
+      twitter: 'matteocollina',
       github: '',
       iconUrl: '/img/speakers/matteo_collina.jpg'
     }],
