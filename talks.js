@@ -223,8 +223,8 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
     time: '09:45',
   },
   {
-    title: 'TBA',
-    description: '',
+    title: 'Doing the Unstuck: How to make browsers compatible with the web',
+    description: 'What does it mean for JavaScript and CSS to be — or not to be — compatible with the web? Is it possible for a site written today to continue to work in 10 years? Likewise, could existing code complicate adding language features or fixing mistakes in web APIs?<br/><br/>In this talk I\'ll discuss the issues that arise when browsers attempt to clean up the web platform, either by adding new language features and DOM APIs or removing old ones — while attempting to remain backwards compatible. I\'ll even talk about some controversial moves made by browsers to support non-standard (cough webkit prefixes) CSS and JS.',
     presenters: [{
       name: 'Mike Taylor',
       intro: 'Mike Taylor is a Web Compatibility Engineering Manager at Mozilla, working from Austin, TX. Previously he worked as a Web Opener at Opera Software, which is a funny title for pretty much the same thing (minus the management bit).',
