@@ -420,8 +420,9 @@ $section-padding-right: 160px;
             border-left: 2px solid $yellow;
         }
         .title {
-            display: block;
-            font-weight: bold;
+          text-transform: uppercase;
+          display: block;
+          font-weight: bold;
         }
         .details {
             display: block;

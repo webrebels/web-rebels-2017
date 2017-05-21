@@ -7,7 +7,7 @@ module.exports = router;
 
 const days = {
     [day1]: {
-        description: 'Welcome to the first day of the conference',
+        description: 'Welcome to the 1st conference day, with 9 talks starting at 09:00 – and dinner at 18:00.',
         schedule: [
             {
                 title: 'Registration and breakfast',
@@ -29,7 +29,7 @@ const days = {
 };
 
 talks.forEach((talk) => {
-    days[talk.date].schedule.push({ title: talk.title, details: talk.description, time: talk.time });
+    days[talk.date].schedule.push({ title: talk.title, details: talk.presenterNames, time: talk.time });
 });
 
 days[day1].schedule.push({
