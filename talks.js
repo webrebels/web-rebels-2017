@@ -283,5 +283,6 @@ talks.forEach((talk) => {
 module.exports = {
   day1,
   day2,
-  talks
+  talks: talks.filter(({workshop}) => !workshop),
+  workshops: talks.filter(({workshop}) => workshop)
 }

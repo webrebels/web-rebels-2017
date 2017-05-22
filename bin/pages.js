@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-const { day1, day2, talks } = require('../talks')
+const { day1, day2, talks, workshops } = require('../talks')
 const router = express.Router();
 module.exports = router;
 
@@ -61,6 +61,7 @@ router.get('/', (req, res) => {
         header: 'penthouse',
         css: req.css,
         talks,
+        workshops,
         days,
         wrSvg,
         fistSvg,

@@ -70,6 +70,45 @@
     {{/each}}
   </div>
 </section>
+<section id="workshops">
+  <h1>Workshops</h1>
+  <div class="left-column section-content">
+    <ul class="talk-nav">
+      {{#each workshops as |talk index|}}
+      <li><a href="#workshop-{{index}}">{{talk.presenterNames}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="right-column">
+    {{#each workshops as |talk index|}}
+      <div id="workshop-{{index}}" class="talk">
+        <div class="talk-details">
+          <h2>{{{talk.title}}}</h2>
+          <p>{{{talk.description}}}</p>
+        </div>
+        <div class="presenter-details cf">
+          {{#each talk.presenters as |presenter index|}}
+          <div class="presenter-wrapper cf">
+            <img class="fl w-25" src="{{iconUrl}}" alt="Profile image for {{name}}"/>
+            <div class="details-wrapper w-75 fl">
+              <p class="name">{{name}}</p>
+              <p class="intro">{{{intro}}}</p>
+              <ul class="links">
+                {{#if twitter}}
+                <li><a href="https://twitter.com/{{twitter}}"><i class="fa fa-twitter"></i>Twitter</a></li>
+                {{/if}}
+                {{#if github}}
+                <li><a href="https://github.com/{{github}}"><i class="fa fa-github"></i>Github</a></li>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
 {{!> schedule}}
 <section id="location">
   <h1>Location</h1>
