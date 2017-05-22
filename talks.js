@@ -236,8 +236,8 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
     time: '09:45',
   },
   {
-    title: 'TBA',
-    description: '',
+    title: 'The Beauty of Bad Code',
+    description: 'No one likes writing bad code. But what is it? How can we prevent it? And is it *really* that bad? Let’s dive in!',
     presenters: [{
       name: 'Raquel Vélez',
       intro: '',
