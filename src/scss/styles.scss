@@ -202,10 +202,10 @@ header {
     .nav-list {
       margin: 0;
       position: relative;
-      width: 170px;
+      width: 180px;
       text-align: right;
       bottom: 210px;
-      left: 90px;
+      left: 75px;
 
       li {
         line-height: 32pt;
@@ -213,7 +213,7 @@ header {
 
       @include desktop {
         bottom: 210px; // Distance to bottom
-        left: 100px;
+        left: 85px;
       }
     }
   }
