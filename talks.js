@@ -181,7 +181,13 @@ That’s mostly it.`,
     title: 'Workshop: Learn to P2P',
     description: `Come join the latest chapter in our series of "Learn to P2P" workshops. <br/><br/> The focus will be how to build systems that support streaming and sharing of real time data. The workshop will consist of a series of small iterative exercises that will take you through the basics of networking and distributed systems, all the way to learning how you can make your own P2P TV and radio stations.
 <br/><br/>There will be content for everybody, no matter your skill level.
-We'll be using Node.js but the techniques will work across any programming language.`,
+We'll be using Node.js but the techniques will work across any programming language.
+<ul class="workshop-details">
+  <li>Time: Saturday 3rd June, 13:00 - 17:00</li>
+  <li>Place: <a href="https://www.google.no/maps/place/Bitraf/@59.9141427,10.7467363,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e623261c89b:0x272bc10019d995ae!8m2!3d59.91414!4d10.748925?hl=en">Bitraf, Pløens Gate 4</a></li>
+  <li>Cost: 134 NOK</li>
+</ul>
+`,
     workshop: true,
     presenters: [
       {

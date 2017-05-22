@@ -202,7 +202,7 @@ header {
     .nav-list {
       margin: 0;
       position: relative;
-      width: 160px;
+      width: 170px;
       text-align: right;
       bottom: 210px;
       left: 90px;
@@ -363,7 +363,20 @@ $section-padding-right: 160px;
         }
     }
 }
-
+#workshops {
+  .workshop-details {
+    list-style: none;
+    li::before {
+      content: '-';
+      margin: 0 8px 0 0;
+      display: inline;
+    }
+    a:hover {
+      color: $white;
+      border-bottom: $white solid 1px;
+    }
+  }
+}
 #schedule {
     .right-column {
         color: $yellow;
