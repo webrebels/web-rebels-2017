@@ -182,12 +182,6 @@ That’s mostly it.`,
     description: `Come join the latest chapter in our series of "Learn to P2P" workshops. <br/><br/> The focus will be how to build systems that support streaming and sharing of real time data. The workshop will consist of a series of small iterative exercises that will take you through the basics of networking and distributed systems, all the way to learning how you can make your own P2P TV and radio stations.
 <br/><br/>There will be content for everybody, no matter your skill level.
 We'll be using Node.js but the techniques will work across any programming language.
-<ul class="workshop-details">
-  <li>Time: Saturday 3rd June, 13:00 - 17:00</li>
-  <li>Place: <a href="https://www.google.no/maps/place/Bitraf/@59.9141427,10.7467363,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e623261c89b:0x272bc10019d995ae!8m2!3d59.91414!4d10.748925?hl=en">Bitraf, Pløens Gate 4</a></li>
-  <li>Cost: 134 NOK</li>
-  <li>Tickets can be purchased <a href="https://ti.to/webrebels/2017">here</a></li>
-</ul>
 `,
     workshop: true,
     presenters: [
@@ -195,7 +189,7 @@ We'll be using Node.js but the techniques will work across any programming langu
         name: 'Mathias Buus Madsen',
         intro: `Mathias lives in Copenhagen, Denmark. He tends to publish a lot stuff on <a href="github.com/mafintosh">github</a>.<br/><br/>
   In the last years he has mainly been working with distributed systems and peer to peer in node (among other things he wrote a streaming torrent client called torrent-stream, a torrent video player and a torrent based file system).<br/><br/>
-  He also works on the dat project (https://dat-data.com) where we’re trying to revolutionize how data is being shared and versioned.`,
+  He also works on the <a href="https://dat-data.com">dat project</a> where we’re trying to revolutionize how data is being shared and versioned.`,
         twitter: '',
         github: 'mafintosh',
         iconUrl: '/img/speakers/mathias_buus_madsen.jpg'
