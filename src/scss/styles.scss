@@ -190,7 +190,11 @@ header {
   }
 
   .menu {
-    font-size: 21pt;
+    font-size: 19pt;
+    @include desktop {
+      font-size: 21pt;
+    }
+
     transition: right 0.4s;
     position: relative;
     bottom: 0;
