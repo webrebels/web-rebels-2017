@@ -78,8 +78,8 @@ header {
     }
     a {
       border-top: solid transparent 4px;
-      padding: 3px 20px 0 20px;
-      margin: 0 40px;
+      padding: 3px 3px 0 3px;
+      margin: 0 12px;
     }
 
     a:focus {
@@ -90,7 +90,7 @@ header {
       color: $yellow;
     }
     .wr-icon {
-      padding-right: 50px;
+      padding-right: 0px;
       svg {
         fill: $white;
         height: 32px;
@@ -212,7 +212,7 @@ header {
       position: relative;
       width: 180px;
       text-align: right;
-      bottom: 210px;
+      bottom: 288px;
       left: 75px;
 
       li {
@@ -220,7 +220,7 @@ header {
       }
 
       @include desktop {
-        bottom: 210px; // Distance to bottom
+        bottom: 288px; // Distance to bottom
         left: 85px;
       }
     }
