@@ -277,6 +277,153 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
   },
 ];
 
+const days = {
+  [day1]: {
+    description: 'Welcome to the first day of the conference',
+    schedule: [
+      {
+        title: 'Registration and breakfast',
+        details: 'As the tradition goes, no need for that hotel breakfast! Join us for a Rebel breakfast instead.',
+        time: '08:00',
+      },
+      {
+        title: 'Mike Taylor',
+        details: 'Doing the Unstuck: How to make browsers compatible with the web',
+        time: '09:00'
+      },
+      {
+        title: 'Steve Kinney',
+        details: 'Bringing Back the 1990s: The Revenge of JavaScript Style Sheets',
+        time: '09:45'
+      },
+      {
+        title: 'Coffee/tea break',
+        details: '',
+        time: '10:30'
+      },
+      {
+        title: 'Magnús Dæhlen',
+        details: 'A Room With a Vue',
+        time: '11:00'
+      },
+      {
+        title: 'Jason Lengstorf',
+        details: 'Who Gives a Fuck About a Monad? Functional Programming for People Who Hate Math',
+        time: '11:45'
+      },
+      {
+        title: 'Lunch',
+        details: '',
+        time: '12:30'
+      },
+      {
+        time: '13:30',
+        title: 'Tiberius Hefflin',
+        details: 'Security Starts With You: Social Engineering'
+      },
+      {
+        time: '14:15',
+        title: 'Marcy Sutton',
+        details: 'JavaScript and Civil Rights: Using Your Skills For The Good of the People'
+      },
+      {
+        time: '15:00',
+        title: 'Coffee/tea break',
+        details: ''
+      },
+      {
+        time: '15:30',
+        title: 'Charlie Gerard',
+        details: 'Look mum, no hands!'
+      },
+      {
+        time: '16:15',
+        title: 'Arne Martin Aurlien',
+        details: 'Compiling (or “transpiling” or whatever) to JS',
+      },
+      {
+        time: '17:00',
+        title: 'Jared Forsyth',
+        details: 'Type systems will make you a better JavaScript developer'
+      },
+      {
+        time: '18:00',
+        title: 'Conference dinner and social gathering',
+        details: 'right next door to the venue.'
+      }
+    ],
+  },
+  [day2]: {
+    description: 'Conference day #2, with 8 more talks starting at 09:00.',
+    schedule: [
+      {
+        title: 'Breakfast',
+        details: 'Full beakfast to help you get ready for an action packed day!',
+        time: '08:00',
+      },
+      {
+        time: '09:00',
+        title: 'Raquel Vélez',
+        details: 'The Beauty of Bad Code'
+      },
+      {
+        time: '09:45',
+        title: 'John Feminella',
+        details: 'Time and Time Again: Fixing Dates in JS'
+      },
+      {
+        time: '10:30',
+        title: 'Coffee/tea break',
+        details: ''
+      },
+      {
+        time: '11:00',
+        title: 'Franziska Hinkelmann',
+        details: 'JavaScript engines - how do they even?'
+      },
+      {
+        time: '11:45',
+        title: 'Benedikt Meurer',
+        details: 'ESnext Performance - Why bother?'
+      },
+      {
+        time: '12:30',
+        title: 'Lunch',
+        details: ''
+      },
+      {
+        time: '13:30',
+        title: 'Jan Krutisch',
+        details: 'Hello? Yes, this is Synth - Making Hardware better with the Web'
+      },
+      {
+        time: '14:15',
+        title: 'Jana Beck',
+        details: 'JavaScript therapy',
+      },
+      {
+        time: '15:00',
+        title: 'Coffee/tea break'
+      },
+      {
+        time: '15:30',
+        title: 'Matteo Collina',
+        details: 'Building a Scalable Pub/Sub system with UpRing'
+      },
+      {
+        time: '16:15',
+        title: 'Mariko Kosaka & Suz Hinton',
+        details: 'tba.js'
+      },
+      {
+        time: '17:00',
+        title: 'Group photo',
+        details: ''
+      }
+    ],
+  },
+};
+
 talks.forEach((talk) => {
   talk.presenterNames = talk.presenters.map(({name}) => name).join(' & ')
 })
@@ -285,5 +432,6 @@ module.exports = {
   day1,
   day2,
   talks: talks.filter(({workshop}) => !workshop),
-  workshops: talks.filter(({workshop}) => workshop)
+  workshops: talks.filter(({workshop}) => workshop),
+  days
 }

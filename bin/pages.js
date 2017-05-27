@@ -1,42 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-const { day1, day2, talks, workshops } = require('../talks')
+const { day1, day2, talks, workshops, days } = require('../talks')
 const router = express.Router();
 module.exports = router;
-
-const days = {
-    [day1]: {
-        description: 'Welcome to the 1st conference day, with 9 talks starting at 09:00 – and dinner at 18:00.',
-        schedule: [
-            {
-                title: 'Registration and breakfast',
-                details: 'As the tradition goes, no need for that hotel breakfast! Join us for a Rebel breakfast instead.',
-                time: '08:00',
-            },
-        ],
-    },
-    [day2]: {
-        description: 'Conference day #2, with 8 more talks starting at 09:00.',
-        schedule: [
-            {
-                title: 'Registration and breakfast',
-                details: 'As the tradition goes, no need for that hotel breakfast! Join us for a Rebel breakfast instead.',
-                time: '08:00',
-            },
-        ],
-    },
-};
-
-talks.forEach((talk) => {
-    days[talk.date].schedule.push({ title: talk.title, details: talk.presenterNames, time: talk.time });
-});
-
-days[day1].schedule.push({
-    title: '',
-    details: 'Conference dinner and social gathering right next door to the venue.',
-    time: '18:00',
-});
 
 function readFile(pathToFile) {
     return fs.readFileSync(
