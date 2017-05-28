@@ -413,7 +413,7 @@ const days = {
       {
         time: '16:15',
         details: 'Mariko Kosaka & Suz Hinton',
-        title: 'tba.js'
+        title: 'Can You Read Me? Creative Java­Script to Make Computer Science Fun'
       },
       {
         time: '17:00',
