@@ -156,8 +156,8 @@ That’s mostly it.`,
     time: '09:45',
   },
   {
-    title: 'TBA',
-    description: '',
+    title: 'Can You Read Me? Creative JavaScript to Make Computer Science Fun',
+    description: 'Two web developers who are full of curiosity to learn all about machines and code met at a meetup. Unsatisfied with traditional computer science textbook and what we felt like not so learner friendly software engineering landscape, we decided to learn by working together in the format we enjoy the most - creative project.<br/><br/>We are building machines (both software and hardware) in JavaScript to send secret messages to each other. Different forms of data blob are exchanged periodically as a message. In order to read those messages, each has to learn and build a system to decode the data.<br/><br/>This talk will tell the story of the machines, their parts, and the possibilities of remote creative collaboration. You’ll come away with fresh inspiration on how JavaScript can be used to learn computer science concepts the enjoyable way.',
     presenters: [
       {
         name: 'Mariko Kosaka',
@@ -181,14 +181,15 @@ That’s mostly it.`,
     title: 'Workshop: Learn to P2P',
     description: `Come join the latest chapter in our series of "Learn to P2P" workshops. <br/><br/> The focus will be how to build systems that support streaming and sharing of real time data. The workshop will consist of a series of small iterative exercises that will take you through the basics of networking and distributed systems, all the way to learning how you can make your own P2P TV and radio stations.
 <br/><br/>There will be content for everybody, no matter your skill level.
-We'll be using Node.js but the techniques will work across any programming language.`,
+We'll be using Node.js but the techniques will work across any programming language.
+`,
     workshop: true,
     presenters: [
       {
         name: 'Mathias Buus Madsen',
         intro: `Mathias lives in Copenhagen, Denmark. He tends to publish a lot stuff on <a href="github.com/mafintosh">github</a>.<br/><br/>
   In the last years he has mainly been working with distributed systems and peer to peer in node (among other things he wrote a streaming torrent client called torrent-stream, a torrent video player and a torrent based file system).<br/><br/>
-  He also works on the dat project (https://dat-data.com) where we’re trying to revolutionize how data is being shared and versioned.`,
+  He also works on the <a href="https://dat-data.com">dat project</a> where we’re trying to revolutionize how data is being shared and versioned.`,
         twitter: '',
         github: 'mafintosh',
         iconUrl: '/img/speakers/mathias_buus_madsen.jpg'
@@ -276,6 +277,153 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
   },
 ];
 
+const days = {
+  [day1]: {
+    description: 'Welcome to the first day of the conference',
+    schedule: [
+      {
+        title: 'Registration and breakfast',
+        details: 'As the tradition goes, no need for that hotel breakfast! Join us for a Rebel breakfast instead.',
+        time: '08:00',
+      },
+      {
+        details: 'Mike Taylor',
+        title: 'Doing the Unstuck: How to make browsers compatible with the web',
+        time: '09:00'
+      },
+      {
+        details: 'Steve Kinney',
+        title: 'Bringing Back the 1990s: The Revenge of JavaScript Style Sheets',
+        time: '09:45'
+      },
+      {
+        title: 'Coffee/tea break',
+        details: '',
+        time: '10:30'
+      },
+      {
+        details: 'Magnús Dæhlen',
+        title: 'A Room With a Vue',
+        time: '11:00'
+      },
+      {
+        details: 'Jason Lengstorf',
+        title: 'Who Gives a Fuck About a Monad? Functional Programming for People Who Hate Math',
+        time: '11:45'
+      },
+      {
+        title: 'Lunch',
+        details: '',
+        time: '12:30'
+      },
+      {
+        time: '13:30',
+        details: 'Tiberius Hefflin',
+        title: 'Security Starts With You: Social Engineering'
+      },
+      {
+        time: '14:15',
+        details: 'Marcy Sutton',
+        title: 'JavaScript and Civil Rights: Using Your Skills For The Good of the People'
+      },
+      {
+        time: '15:00',
+        title: 'Coffee/tea break',
+        details: ''
+      },
+      {
+        time: '15:30',
+        details: 'Charlie Gerard',
+        title: 'Look mum, no hands!'
+      },
+      {
+        time: '16:15',
+        details: 'Arne Martin Aurlien',
+        title: 'Compiling (or “transpiling” or whatever) to JS',
+      },
+      {
+        time: '17:00',
+        details: 'Jared Forsyth',
+        title: 'Type systems will make you a better JavaScript developer'
+      },
+      {
+        time: '18:00',
+        title: 'Conference dinner and social gathering',
+        details: 'right next door to the venue.'
+      }
+    ],
+  },
+  [day2]: {
+    description: 'Conference day #2, with 8 more talks starting at 09:00.',
+    schedule: [
+      {
+        title: 'Breakfast',
+        details: 'Full beakfast to help you get ready for an action packed day!',
+        time: '08:00',
+      },
+      {
+        time: '09:00',
+        details: 'Raquel Vélez',
+        title: 'The Beauty of Bad Code'
+      },
+      {
+        time: '09:45',
+        details: 'John Feminella',
+        title: 'Time and Time Again: Fixing Dates in JS'
+      },
+      {
+        time: '10:30',
+        title: 'Coffee/tea break',
+        details: ''
+      },
+      {
+        time: '11:00',
+        details: 'Franziska Hinkelmann',
+        title: 'JavaScript engines - how do they even?'
+      },
+      {
+        time: '11:45',
+        details: 'Benedikt Meurer',
+        title: 'ESnext Performance - Why bother?'
+      },
+      {
+        time: '12:30',
+        title: 'Lunch',
+        details: ''
+      },
+      {
+        time: '13:30',
+        details: 'Jan Krutisch',
+        title: 'Hello? Yes, this is Synth - Making Hardware better with the Web'
+      },
+      {
+        time: '14:15',
+        details: 'Jana Beck',
+        title: 'JavaScript therapy',
+      },
+      {
+        time: '15:00',
+        title: 'Coffee/tea break'
+      },
+      {
+        time: '15:30',
+        details: 'Matteo Collina',
+        title: 'Building a Scalable Pub/Sub system with UpRing'
+      },
+      {
+        time: '16:15',
+        details: 'Mariko Kosaka & Suz Hinton',
+        title: 'Can You Read Me? Creative Java­Script to Make Computer Science Fun'
+      },
+      {
+        time: '17:00',
+        title: 'Group photo',
+        details: ''
+      }
+    ],
+  },
+};
+
 talks.forEach((talk) => {
   talk.presenterNames = talk.presenters.map(({name}) => name).join(' & ')
 })
@@ -283,5 +431,7 @@ talks.forEach((talk) => {
 module.exports = {
   day1,
   day2,
-  talks
+  talks: talks.filter(({workshop}) => !workshop),
+  workshops: talks.filter(({workshop}) => workshop),
+  days
 }

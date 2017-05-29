@@ -9,7 +9,8 @@
       <ul class="nav-list">
         <li><a href="https://ti.to/webrebels/2017">tickets <i class="fa fa-check"></i></a></li>
         <li><a id="talks-btn" href="#talks">talks <i class="fa fa-microphone"></i></a></li>
-        <!-- <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li> -->
+        <li><a href="#workshops">workshops <i class="fa fa-terminal"></i></a></li>
+        <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li>
         <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
         <li><a href="#about">about <i class="fa fa-question"></i></a></li>
         <li><a href="#sponsors">sponsors <i class="fa fa-rocket"></i></a></li>
@@ -22,7 +23,8 @@
         <li class="wr-icon"><a href="#top">{{{wrSvg}}}</a></li>
         <li><a href="https://ti.to/webrebels/2017">tickets <i class="fa fa-check"></i></a></li>
         <li><a href="#talks">talks <i class="fa fa-microphone"></i></a></li>
-        <!-- <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li> -->
+        <li><a href="#workshops">workshops <i class="fa fa-terminal"></i></a></li>
+        <li><a href="#schedule">schedule <i class="fa fa-calendar"></i></a></li>
         <li><a href="#location">location <i class="fa fa-location-arrow"></i></a></li>
         <li><a href="#about">about <i class="fa fa-question"></i></a></li>
         <li><a href="#sponsors">sponsors <i class="fa fa-rocket"></i></a></li>
@@ -70,7 +72,63 @@
     {{/each}}
   </div>
 </section>
-{{!> schedule}}
+<section id="workshops">
+  <h1>Workshops</h1>
+  <div class="left-column section-content">
+    <p>
+      Get hands on with other Web Rebels
+    </p>
+    <ul class="talk-nav">
+      {{#each workshops as |talk index|}}
+      <li><a href="#workshop-{{index}}">{{talk.presenterNames}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="right-column">
+    {{#each workshops as |talk index|}}
+      <div id="workshop-{{index}}" class="talk">
+        <div class="talk-details">
+          <h2>{{{talk.title}}}</h2>
+          <p>{{{talk.description}}}</p>
+          <ul class="workshop-details">
+            <li>Time: Saturday 3rd June, 13:00 - 17:00</li>
+            <li>Place:
+              <a href="https://www.google.no/maps/place/Bitraf/@59.9141427,10.7467363,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e623261c89b:0x272bc10019d995ae!8m2!3d59.91414!4d10.748925?hl=en">
+                Bitraf, Pløens Gate 4
+              </a>
+            </li>
+            <li>Cost: 134 NOK</li>
+            <li>Tickets can be purchased
+              <a href="https://ti.to/webrebels/2017">
+                here
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="presenter-details cf">
+          {{#each talk.presenters as |presenter index|}}
+          <div class="presenter-wrapper cf">
+            <img class="fl w-25" src="{{iconUrl}}" alt="Profile image for {{name}}"/>
+            <div class="details-wrapper w-75 fl">
+              <p class="name">{{name}}</p>
+              <p class="intro">{{{intro}}}</p>
+              <ul class="links">
+                {{#if twitter}}
+                <li><a href="https://twitter.com/{{twitter}}"><i class="fa fa-twitter"></i>Twitter</a></li>
+                {{/if}}
+                {{#if github}}
+                <li><a href="https://github.com/{{github}}"><i class="fa fa-github"></i>Github</a></li>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
+{{> schedule}}
 <section id="location">
   <h1>Location</h1>
   <div class="left-column section-content">
