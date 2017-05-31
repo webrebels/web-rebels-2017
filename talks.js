@@ -279,7 +279,7 @@ He recently got a Ph.D. with a thesis titled "Application Platforms for the Inte
 
 const days = {
   [day1]: {
-    description: 'Welcome to the first day of the conference',
+    description: 'Welcome to the first day of the conference <br> Follow the conference talks live on <a href="https://youtu.be/4WbpKSh0FWk">YouTube</a> from 09:00 to 18:00',
     schedule: [
       {
         title: 'Registration and breakfast',
@@ -354,7 +354,7 @@ const days = {
     ],
   },
   [day2]: {
-    description: 'Conference day #2, with 8 more talks starting at 09:00.',
+    description: 'Conference day #2, with 8 more talks starting at 09:00. <br> Follow the conference talks live on <a href="https://youtu.be/acIOV8wtkOo">YouTube</a> from 09:00 to 17:00',
     schedule: [
       {
         title: 'Breakfast',

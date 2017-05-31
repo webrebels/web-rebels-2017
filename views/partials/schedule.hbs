@@ -6,7 +6,7 @@
   <div class="right-column">
     {{#each days as |details day|}}
     <h2>{{day}}</h2>
-    <p>{{details.description}}</p>
+    <p>{{{ details.description }}}</p>
     <ol class="day-schedule">
        {{#each details.schedule as |item|}}
        <li class="schedule-item">

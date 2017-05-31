@@ -389,6 +389,12 @@ $section-padding-right: 160px;
     .right-column {
         color: $yellow;
         padding: 0 10px;
+        p {
+          a {
+            color: $yellow;
+            border-bottom: $yellow solid 1px;
+          }
+        }
     }
 
     .day-schedule {
