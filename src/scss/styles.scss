@@ -50,7 +50,15 @@ header {
     max-width: 500px;
     width: 40%;
     position: relative;
-    top: 40vh;
+    top: 60px;
+    display: block;
+  }
+
+  .livestream {
+    position: relative;
+    top: 80px;
+    display: block;
+    margin: 0 auto;
   }
 
   nav {
