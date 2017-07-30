@@ -1,5 +1,7 @@
 # Web Rebels 2017 Conference
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/webrebels/web-rebels-2017.svg)](https://greenkeeper.io/)
+
 This is the source code for the Web Rebels 2017 Conference web site.
 
 
