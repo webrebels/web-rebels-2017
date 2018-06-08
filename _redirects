@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+https://festive-shaw-9e68a2.netlify.com/* https://2017.webrebels.org/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://festive-shaw-9e68a2.netlify.com/* https://2017.webrebels.org/:splat 301!
